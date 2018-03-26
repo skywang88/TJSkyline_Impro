@@ -1,0 +1,12 @@
+{
+		"resultCode": 1,
+    "data":{
+        "fltSeasonId": 1014,
+        "days": 147,
+        "daybegin": 1030,
+        "dayend": 325,
+        "airplanesNum": 86,
+        "airplanesTypeNum": 4,
+        "airportsNum": 56
+    }
+}

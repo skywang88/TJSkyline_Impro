@@ -1,0 +1,35 @@
+ { "qarTimeMatrices": {"type": [
+            {
+                "index": 10035,
+                "timeArrays": [{
+                    "takeoffAptId": 202,
+                    "landatAptId": 133,
+                    "time": 77
+                }]
+            },
+            {
+                "index": 36,
+                "timeArrays": [{
+                    "takeoffAptId": 202,
+                    "landatAptId": 76,
+                    "time": 139
+                }]
+            },
+            {
+                "index": 10036,
+                "timeArrays": [{
+                    "takeoffAptId": 107,
+                    "landatAptId": 76,
+                    "time": 141
+                }]
+            },
+            {
+                "index": 10037,
+                "timeArrays": [{
+                    "takeoffAptId": 228,
+                    "landatAptId": 107,
+                    "time": 116
+                }]
+            }
+        ]}
+}

@@ -1,0 +1,2139 @@
+{
+	"timeScale": 5,
+	"type": [{
+		"index": 1,
+		"timeWindowsArray": [{
+			"time": 134,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 144,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 147,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 159,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 2,
+		"timeWindowsArray": [{
+			"time": 174,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 187,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 266,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 278,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 3,
+		"timeWindowsArray": [{
+			"time": 265,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 280,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 4,
+		"timeWindowsArray": [{
+			"time": 155,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 167,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 237,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 249,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 253,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 267,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 6,
+		"timeWindowsArray": [{
+			"time": 1,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 3,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 4,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 7,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 56,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 85,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 87,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 93,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 96,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 97,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 99,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 100,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 101,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 103,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 112,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 115,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 122,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 123,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 127,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 134,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 138,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 140,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 142,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 144,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 145,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 152,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 153,
+			"takeoff_amount": 3,
+			"lan_amount": 0
+		},
+		{
+			"time": 155,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 156,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 157,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 165,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 167,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 179,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 180,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 188,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 192,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 193,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 194,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 197,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 203,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 204,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 206,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 207,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 209,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 210,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 212,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 214,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 218,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 219,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 223,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 224,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 230,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 232,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 236,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 240,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 249,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 254,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 259,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 267,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 275,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 276,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 287,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 7,
+		"timeWindowsArray": [{
+			"time": 66,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 97,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 102,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 115,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 116,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 119,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 128,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 129,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 131,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 151,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 175,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 184,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 192,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 200,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 201,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 213,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 228,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 256,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 257,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 264,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 270,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 275,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 279,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 8,
+		"timeWindowsArray": [{
+			"time": 121,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 135,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 164,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 178,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 191,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 193,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 207,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 249,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 262,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 9,
+		"timeWindowsArray": [{
+			"time": 144,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 145,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 156,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 160,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 163,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 175,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 264,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 275,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 10,
+		"timeWindowsArray": [{
+			"time": 118,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 131,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 189,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 202,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 11,
+		"timeWindowsArray": [{
+			"time": 123,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 134,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 157,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 170,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 180,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 191,
+			"takeoff_amount": 2,
+			"lan_amount": 1
+		},
+		{
+			"time": 204,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 247,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 259,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 12,
+		"timeWindowsArray": [{
+			"time": 122,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 126,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 134,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 139,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 165,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 176,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 201,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 213,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 257,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 270,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 13,
+		"timeWindowsArray": [{
+			"time": 116,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 117,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 127,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 129,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 130,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 135,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 142,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 144,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 147,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 156,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 158,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 170,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 179,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 191,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 193,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 207,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 215,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 217,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 227,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 229,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 239,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 248,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 251,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 260,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 14,
+		"timeWindowsArray": [{
+			"time": 112,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 122,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 143,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 153,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 178,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 187,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 15,
+		"timeWindowsArray": [{
+			"time": 2,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 3,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 6,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 16,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 88,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 89,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 93,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 94,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 99,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 100,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 103,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 104,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 107,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 108,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 110,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 120,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 124,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 130,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 135,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 138,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 142,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 143,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 146,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 151,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 153,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 155,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 157,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 159,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 168,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 169,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 171,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 179,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 190,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 191,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 195,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 199,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 200,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 202,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 205,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 209,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 213,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 219,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 222,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 228,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 229,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 231,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 237,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 240,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 241,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 247,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 248,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 249,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 260,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 263,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 271,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 285,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 286,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 287,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		}]
+	},
+	{
+		"index": 16,
+		"timeWindowsArray": [{
+			"time": 6,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 9,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 11,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 13,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 15,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 81,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 83,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 88,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 95,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 100,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 109,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 111,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 114,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 151,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 154,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 160,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 162,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 166,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 171,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 185,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 190,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 192,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 193,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 199,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 206,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 215,
+			"takeoff_amount": 0,
+			"lan_amount": 3
+		},
+		{
+			"time": 216,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 224,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 229,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 235,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 238,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 240,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 242,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 244,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 248,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 251,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 252,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 273,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 280,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		}]
+	},
+	{
+		"index": 17,
+		"timeWindowsArray": [{
+			"time": 10,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 11,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 88,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 93,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 229,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 240,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 18,
+		"timeWindowsArray": [{
+			"time": 6,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 20,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 22,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 31,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 81,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 85,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 90,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 95,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 96,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 97,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 98,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 99,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 100,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 103,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 105,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 112,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 114,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 116,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 118,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 119,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 122,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 131,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 133,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 134,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 138,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 150,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 153,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 154,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 156,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 157,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 158,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 161,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 162,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 163,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 171,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 173,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 177,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 178,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 180,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 181,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 183,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 184,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 189,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 190,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 191,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 197,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 199,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 202,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 204,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 205,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 215,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 216,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 218,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 219,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 221,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 226,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 228,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 229,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 234,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 235,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 238,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 239,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 240,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 243,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 245,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 249,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 250,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 252,
+			"takeoff_amount": 1,
+			"lan_amount": 1
+		},
+		{
+			"time": 258,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 259,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 264,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 268,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 274,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 275,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 280,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 284,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 286,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		}]
+	},
+	{
+		"index": 19,
+		"timeWindowsArray": [{
+			"time": 141,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 149,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 214,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 226,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 20,
+		"timeWindowsArray": [{
+			"time": 91,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 92,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 102,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 126,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 130,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 139,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 187,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 197,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 204,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 213,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 230,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 231,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 233,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 256,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		}]
+	},
+	{
+		"index": 21,
+		"timeWindowsArray": [{
+			"time": 97,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 101,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 118,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 129,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 132,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 133,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 140,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 158,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 168,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 204,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 205,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 217,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 228,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 230,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 231,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 258,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 273,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 283,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 22,
+		"timeWindowsArray": [{
+			"time": 104,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 131,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 132,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 141,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 207,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 218,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 242,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 257,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 23,
+		"timeWindowsArray": [{
+			"time": 177,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 184,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 24,
+		"timeWindowsArray": [{
+			"time": 178,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 188,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 26,
+		"timeWindowsArray": [{
+			"time": 192,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 204,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 27,
+		"timeWindowsArray": [{
+			"time": 146,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 148,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 155,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 156,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 28,
+		"timeWindowsArray": [{
+			"time": 117,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 126,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		},
+		{
+			"time": 144,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 157,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	},
+	{
+		"index": 29,
+		"timeWindowsArray": [{
+			"time": 208,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 222,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	}]
+}

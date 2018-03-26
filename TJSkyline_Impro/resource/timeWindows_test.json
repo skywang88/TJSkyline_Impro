@@ -1,0 +1,27 @@
+{
+	"timeScale": 60,
+	"type": [
+	{
+		"index": 17,
+		"timeWindowsArray": [{
+			"time": 0,
+			"takeoff_amount": 0,
+			"lan_amount": 2
+		},
+		{
+			"time": 7,
+			"takeoff_amount": 2,
+			"lan_amount": 0
+		},
+		{
+			"time": 19,
+			"takeoff_amount": 0,
+			"lan_amount": 1
+		},
+		{
+			"time": 20,
+			"takeoff_amount": 1,
+			"lan_amount": 0
+		}]
+	}]
+}

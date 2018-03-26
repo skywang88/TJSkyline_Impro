@@ -1,0 +1,793 @@
+{
+	"type": [{
+		"index": "上海",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 11
+		}]
+	},
+	{
+		"index": "广州",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 14
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 15
+		}]
+	},
+	{
+		"index": "成都",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 22
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 23
+		}]
+	},
+	{
+		"index": "昆明",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 12
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 13
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 15
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 16
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 19
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 20
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 21
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 22
+		}]
+	},
+	{
+		"index": "西安",
+		"timeWindowsArray": [{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 0
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 1
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 6
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 7
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 8
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 9
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 10
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 11
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 1,
+			"time": 12
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 13
+		},
+		{
+			"lan_amount": 3,
+			"takeoff_amount": 0,
+			"time": 16
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 2,
+			"time": 17
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 18
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 19
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 20
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 21
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 22
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 23
+		}]
+	},
+	{
+		"index": "重庆",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 0
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 2,
+			"time": 9
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 10
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 16
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 17
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 21
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 22
+		}]
+	},
+	{
+		"index": "杭州",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 11
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 16
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 17
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 20
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 21
+		}]
+	},
+	{
+		"index": "厦门",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 11
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 12
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 22
+		}]
+	},
+	{
+		"index": "南京",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 9
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 10
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 15
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 16
+		}]
+	},
+	{
+		"index": "长沙",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 11
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 13
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 14
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 15
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 16
+		}]
+	},
+	{
+		"index": "武汉",
+		"timeWindowsArray": [{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 11
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 16
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 17
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 21
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 22
+		}]
+	},
+	{
+		"index": "郑州",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 12
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 13
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 16
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 17
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 18
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 19
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 20
+		}]
+	},
+	{
+		"index": "青岛",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 9
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 10
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 11
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 12
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 15
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 16
+		}]
+	},
+	{
+		"index": "乌鲁木齐",
+		"timeWindowsArray": [{
+			"lan_amount": 4,
+			"takeoff_amount": 0,
+			"time": 0
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 1
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 4,
+			"time": 7
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 3,
+			"time": 8
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 9
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 11
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 1,
+			"time": 12
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 13
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 14
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 15
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 16
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 17
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 18
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 2,
+			"time": 19
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 20
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 21
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 22
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 23
+		}]
+	},
+	{
+		"index": "海口",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 0
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 1
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 6
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 7
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 8
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 9
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 13
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 14
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 15
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 1,
+			"time": 16
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 17
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 2,
+			"time": 19
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 20
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 21
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 22
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 23
+		}]
+	},
+	{
+		"index": "三亚",
+		"timeWindowsArray": [{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 0
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 7
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 12
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 18
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 19
+		}]
+	},
+	{
+		"index": "天津",
+		"timeWindowsArray": [{
+			"lan_amount": 3,
+			"takeoff_amount": 0,
+			"time": 0
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 0,
+			"time": 1
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 6
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 7
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 4,
+			"time": 8
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 11
+		},
+		{
+			"lan_amount": 4,
+			"takeoff_amount": 0,
+			"time": 13
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 5,
+			"time": 14
+		},
+		{
+			"lan_amount": 2,
+			"takeoff_amount": 1,
+			"time": 15
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 2,
+			"time": 16
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 17
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 18
+		},
+		{
+			"lan_amount": 3,
+			"takeoff_amount": 1,
+			"time": 19
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 20
+		},
+		{
+			"lan_amount": 1,
+			"takeoff_amount": 1,
+			"time": 21
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 22
+		},
+		{
+			"lan_amount": 3,
+			"takeoff_amount": 0,
+			"time": 23
+		}]
+	},
+	{
+		"index": "哈尔滨",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 18
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 19
+		}]
+	},
+	{
+		"index": "贵阳",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 19
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 20
+		}]
+	},
+	{
+		"index": "长春",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 16
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 17
+		}]
+	},
+	{
+		"index": "温州",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 12
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 13
+		}]
+	},
+	{
+		"index": "石家庄",
+		"timeWindowsArray": [{
+			"lan_amount": 1,
+			"takeoff_amount": 0,
+			"time": 10
+		},
+		{
+			"lan_amount": 0,
+			"takeoff_amount": 1,
+			"time": 11
+		}]
+	}]
+}

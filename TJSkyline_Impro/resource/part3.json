@@ -1,0 +1,99 @@
+ {"aptPlaneCounts": [
+            {
+                "aptId": 18,
+                "planeMdlId": 4,
+                "atFlyNum": 1,
+                "standByNum": 0
+            },
+            {
+                "aptId": 18,
+                "planeMdlId": 3,
+                "atFlyNum": 8,
+                "standByNum": 0
+            },
+            {
+                "aptId": 6,
+                "planeMdlId": 3,
+                "atFlyNum": 3,
+                "standByNum": 0
+            },
+            {
+                "aptId": 15,
+                "planeMdlId": 3,
+                "atFlyNum": 7,
+                "standByNum": 0
+            },
+            {
+                "aptId": 16,
+                "planeMdlId": 3,
+                "atFlyNum": 3,
+                "standByNum": 0
+            },
+            {
+                "aptId": 17,
+                "planeMdlId": 3,
+                "atFlyNum": 2,
+                "standByNum": 0
+            },
+            {
+                "aptId": 18,
+                "planeMdlId": 2,
+                "atFlyNum": 8,
+                "standByNum": 3
+            },
+            {
+                "aptId": 6,
+                "planeMdlId": 2,
+                "atFlyNum": 8,
+                "standByNum": 0
+            },
+            {
+                "aptId": 15,
+                "planeMdlId": 2,
+                "atFlyNum": 5,
+                "standByNum": 0
+            },
+            {
+                "aptId": 30,
+                "planeMdlId": 2,
+                "atFlyNum": 6,
+                "standByNum": 0
+            },
+            {
+                "aptId": 20,
+                "planeMdlId": 2,
+                "atFlyNum": 4,
+                "standByNum": 0
+            },
+            {
+                "aptId": 16,
+                "planeMdlId": 2,
+                "atFlyNum": 5,
+                "standByNum": 0
+            },
+            {
+                "aptId": 21,
+                "planeMdlId": 2,
+                "atFlyNum": 5,
+                "standByNum": 0
+            },
+            {
+                "aptId": 18,
+                "planeMdlId": 1,
+                "atFlyNum": 4,
+                "standByNum": 6
+            },
+            {
+                "aptId": 6,
+                "planeMdlId": 1,
+                "atFlyNum": 2,
+                "standByNum": 0
+            },
+            {
+                "aptId": 30,
+                "planeMdlId": 1,
+                "atFlyNum": 4,
+                "standByNum": 2
+            }
+        ]
+}
