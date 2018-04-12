@@ -5,7 +5,7 @@
 #include<string.h>
 #include"..\IO\OutxqxFile.h"
 #define MAXFLIGHTDAY 1
-#define LeastValue 100
+#define LeastValue 1
 
 struct variable
 {
@@ -184,8 +184,8 @@ int IsMatchConstrait1(int point1, int time1, int direction)
     int i;
 //    if(timetable[point1][time1]==0)
 //        return 1;
-    //if(time1>=252||time1<=84)
-    //    return 1;
+    if(direction==0&&(time1>=264||time1<=84))
+        return 0;
 	time1 = time1 % DayTtime;
 	if (time1 == 0) {
 		return 0;
@@ -274,6 +274,8 @@ int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *in
             for(point2=0;point2<AirportsNum;point2++){
                 if(point1==point2)
                     continue;
+				if ((point1 == 5|| point1 == 50||point1==17) && point2 == 16)
+					printf("\n");
                 if(involeAirports[point2]==0){
                     continue;
                 }
@@ -285,12 +287,15 @@ int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *in
                 }
 
                 for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-					if (ValueMatrix[AirPlaneTypei][point1][point2][time1]<=LeastValue){
-						continue;
-					}
+					if ((point1 == 5 || point1 == 50 || point1 == 17) && point2 == 16 &&
+						(time1 == 252 || time1 == 120 || time1 == 168))
+						printf("\n");
 					if(!IsMatchConstrait1(point1,time1,0)){
                         continue;
                     }
+					if (ValueMatrix[AirPlaneTypei][point1][point2][time1%DayTtime] <= LeastValue) {
+						continue;
+					}
                     for(time2=time1+RTime[AirPlaneTypei][point1][point2]-1;
                     time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point2]&&time2<=time1+RTime[AirPlaneTypei][point1][point2]+2;time2++){
                       //  printf("%d %d %d %d\n",point1,point2,time1,time2);
@@ -321,7 +326,7 @@ int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *in
                             continue;
                         }
                     for(time2=time1+APT[point1].PassTime[AirPlaneTypei];
-                    time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point1]&&time2<=time1+APT[point1].PassTime[AirPlaneTypei]+36;time2++){
+                    time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point1]&&time2<=time1+APT[point1].PassTime[AirPlaneTypei]+24;time2++){
                         if(!IsMatchConstrait1(point1,time2,0)){
                             continue;
                         }
@@ -414,12 +419,12 @@ int PreValue(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *invol
                     continue;
                 }
                 for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-					if (ValueMatrix[AirPlaneTypei][point1][point2][time1] <= LeastValue) {
-						continue;
-					}
 					if(!IsMatchConstrait1(point1,time1,0)){
                         continue;
                     }
+					if (ValueMatrix[AirPlaneTypei][point1][point2][time1%DayTtime] <= LeastValue) {
+						continue;
+					}
                     for(time2=time1+RTime[AirPlaneTypei][point1][point2]-1;
                     time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point2]&&time2<=time1+RTime[AirPlaneTypei][point1][point2]+2;time2++){
                         if(!IsMatchConstrait1(point2,time2,1)){
@@ -458,7 +463,7 @@ int PreValue(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *invol
                         if(!IsMatchConstrait1(point1,time2,0)){
                             continue;
                         }
-
+						//printf("%d_%d_%d_%d_%d\n", i, 1, point1, time1, time2);
                         Deval[i].variableType=1;
                         Deval[i].airplane=airplane;
                         Deval[i].airplaneType=AirPlaneTypei;
@@ -466,10 +471,12 @@ int PreValue(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *invol
                         Deval[i].point2=point1;
                         Deval[i].time1=time1;
                         Deval[i].time2=time2;
+						//printf("%d_%d_%d_%d_%d\n",i, Deval[i].variableType, Deval[i].point1, Deval[i].time1, Deval[i].time2);
                         i++;
 
 						if (TypeBaseN[AirPlaneTypei][point1] > 0
 							&& IsShiftTime(time1)) {
+							//printf("%d_%d_%d_%d_%d\n", i, 3, point1, time1, time2);
 							Deval[i].variableType = 3;
 							Deval[i].airplane = airplane;
 							Deval[i].airplaneType = AirPlaneTypei;
@@ -477,8 +484,9 @@ int PreValue(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *invol
 							Deval[i].point2 = point1;
 							Deval[i].time1 = time1;
 							Deval[i].time2 = time2;
+							//printf("%d_%d_%d_%d_%d\n", i, Deval[i].variableType, Deval[i].point1, Deval[i].time1, Deval[i].time2);
 							i++;
-							i++;
+							
 						}
                     }
                 }
@@ -571,7 +579,7 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
     }
 
     for(i=Sumv[0];i<Sumv[1];i++){
-        sprintf(name,"y_%d_%d_%d_%d_%d",Deval[i].airplane,Deval[i].airplaneType,Deval[i].point1,Deval[i].time1,Deval[i].time2);
+        sprintf(name,"y_%d_%d_%d_%d_%d",Deval[i].airplane,Deval[i].variableType,Deval[i].point1,Deval[i].time1,Deval[i].time2);
         error = GRBaddvar(model, 0, NULL, NULL, 0,
                         0.0, 1.0, GRB_BINARY, name);
         if(error)
@@ -840,7 +848,7 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 						   if (Deval[i].airplane == mi && Deval[i].time1 < t1*HourTime)
 						   {
 							   ind[j] = i;
-							   if(Deval[i].airplaneType==4)
+							   if(Deval[i].variableType ==3)
 								val[j] = Deval[i].time2 - Deval[i].time1-CrewMaxWorkTime;
 							   else val[j] = Deval[i].time2 - Deval[i].time1;
 							   j++;
@@ -864,7 +872,7 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 					        if(Deval[i].airplane==mi&&Deval[i].time2>t1*HourTime)
 					        {
 					            ind[j]=i;
-								if (Deval[i].airplaneType == 4)
+								if (Deval[i].variableType == 3)
 									val[j] = Deval[i].time2 - Deval[i].time1 - CrewMaxWorkTime;
 								else val[j] = Deval[i].time2 - Deval[i].time1;
 					            j++;
@@ -1023,7 +1031,7 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 						if (Deval[i].airplane == mi && Deval[i].time1 < t1*HourTime)
 						{
 							ind[j] = i;
-							if (Deval[i].airplaneType == 4)
+							if (Deval[i].variableType == 3)
 								val[j] =  - CrewMaxFlightTime;
 							j++;
 						}
@@ -1046,7 +1054,7 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 						if (Deval[i].airplane == mi&&Deval[i].time2>t1*HourTime)
 						{
 							ind[j] = i;
-							if (Deval[i].airplaneType == 4)
+							if (Deval[i].variableType == 3)
 								val[j] = -CrewMaxFlightTime;
 							j++;
 						}
@@ -1062,7 +1070,7 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 		//最多一次机组换班
 		for (mi = 0; mi < AirPlaneNum; mi++) {
 			for (i = Sumv[0],j=0; i < Sumv[1]; i++) {
-				if (Deval[i].airplaneType == 4 && Deval[i].airplane == mi) {
+				if (Deval[i].variableType == 3 && Deval[i].airplane == mi) {
 					ind[j] = i;
 					val[j] = 1;
 					j++;

@@ -264,7 +264,7 @@ void CRoute()
                 continue;
             if(TypeBaseN[k][i]!=0){
                 BeAirports[0]=BeAirports[1]=i;
-                CreateRoute1(k,BeAirports,1,TypeBaseN[k][i]*30,-1,Timelong);
+                CreateRoute1(k,BeAirports,1,TypeBaseN[k][i]*10,-1,Timelong);
                 write_log(LogFile,1,"1route %d %d success\n",k,i);
                 //printf("1route %d %d success\n",k,i);
                 LastRecordNum=outFILEIn("airline.txt",RecordNum,LastRecordNum);
@@ -283,7 +283,7 @@ void CRoute()
                 if(TypeBaseN[k][j]!=0){
                     BeAirports[0]=i;
                     BeAirports[1]=j;
-                    CreateRoute1(k,BeAirports,2,Minner(TypeBaseN[k][i],TypeBaseN[k][j])*30,-1,Timelong);
+                    CreateRoute1(k,BeAirports,2,Minner(TypeBaseN[k][i],TypeBaseN[k][j])*10,-1,Timelong);
                    // printf("3route %d %d %dsuccess\n",k,i,j);
                     write_log(LogFile,1,"3route %d %d %d success\n",k,i,j);
                     LastRecordNum=outFILEIn("airline.txt",RecordNum,LastRecordNum);

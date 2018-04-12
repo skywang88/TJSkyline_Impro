@@ -166,7 +166,9 @@ void simpleOptimizeS(int AirPlaneTypei, int Airportsi)
 
 		//printf("%d %d\n",i,AirportsTimeStart[i]);
 	}
-
+	//for (i = 0; i < AirportsNum; i++) {
+	//	printf("%d %d\n", i, APT[i].PassTime[AirPlaneTypei]);
+	//}
 	//    for(i=0;i<AirportsNum;i++){
 	//        printf("s %d:%d %d\n",i,AirportsTimeStart[Airportsi][i],pre[i]);
 	//    }
@@ -194,13 +196,13 @@ void simpleOptimizeS(int AirPlaneTypei, int Airportsi)
 		//            printf("s %d:%d %d",i,AirportsTimeStart[Airportsi][i],pre[i]);
 		//        }
 	}
-
+	//for (i = 0; i<AirportsNum; i++) {
+	//	printf("%d %d %d %d\n", i, pre[i], AirportsTimeStart[AirPlaneTypei][Airportsi][i], RTime[AirPlaneTypei][Airportsi][i] - 1);
+	//}
+	//printf("\n");
 	free(pre);
 	free(visit);
-	//    for(i=0;i<AirportsNum;i++){
-	//       / printf("%d %d %d %d\n",i,pre[i], AirportsTimeStart[i],RTime[AirPlaneTypei][Airportsi][i]-1);
-	//    }
-	//    printf("\n");
+
 }
 
 void simpleOptimizeE(int AirPlaneTypei, int Airportsj)
@@ -270,7 +272,11 @@ void simpleOptimize()
 
 	for (i = 0; i<AirplaneTypeNum; i++) {
 		for (j = 0; j<AirportsNum; j++) {
+
 			if (TypeBaseN[i][j] != 0) {
+				if (i == 2 && j == 14) {
+					printf("%d",i);
+				}
 				simpleOptimizeS(i, j);
 				simpleOptimizeE(i, j);
 			}
@@ -368,14 +374,18 @@ void MyHeapSort(int *AirportN, int n, int Airporti)
     }
 }
 
-int RandomByWeight(struct randomStruct rstemp)
+int RandomByWeight()
 {
 	int i;
-	int Nk=rand()% rstemp.weightSum;
+	int Nk=rand()% AllAirportsWeight.weightSum;
 	int Nowsum = 0;
+	//for (i = 0; i < AirportsNum; i++) {
+	//	printf("%d\t%d\n", i, AllAirportsWeight.WeightAirports[i]);
+	//}
+	//printf("%d\n", AllAirportsWeight.weightSum);
 	for (i = 0; i < AirportsNum; i++) {
-		if (rstemp.WeightAirports[i] != 0 ) {
-			Nowsum += rstemp.WeightAirports[i];
+		if (AllAirportsWeight.WeightAirports[i] != 0 ) {
+			Nowsum += AllAirportsWeight.WeightAirports[i];
 			if (Nowsum > Nk) {
 				return i;
 			}
@@ -564,7 +574,7 @@ void Timeset(int AirPlaneTypei)
     }
     if(AirPlaneTypei==2){
         MaxBeginTime=36;
-        MaxEndTime=36;
+        MaxEndTime=60;
         LongestFlightTime=-1;
     }
 }
@@ -643,23 +653,28 @@ void UpdateWeight(int i, int AirPlaneTypei, int *involeAirports)
 	int j;
 	AllAirportsWeight.weightSum -= AllAirportsWeight.WeightAirports[i];
 	AllAirportsWeight.WeightAirports[i] = 0;
+	//printf("%d %d\n",i, AllAirportsWeight.weightSum);
 	for (j = 0; j < AirportsNum; j++) {
-		if (involeAirports[j] == 1)
+		//printf("%d,%d\n", j, RTime[AirPlaneTypei][i][j]);
+		if (involeAirports[j] == 1
+			|| AllAirportsWeight.WeightAirports[j]>0)
 			continue;
 		if (RTime[AirPlaneTypei][i][j] < MaxTime
 			&&RTime[AirPlaneTypei][i][j] >= 18) {
-			AllAirportsWeight.weightSum -= AllAirportsWeight.WeightAirports[j];
-			AllAirportsWeight.WeightAirports[j] = 1;
+			AllAirportsWeight.WeightAirports[j] += 1;
+			//printf("%d,%d,%d\n", j, RTime[AirPlaneTypei][i][j], AllAirportsWeight.WeightAirports[j]);
 			AllAirportsWeight.weightSum += AllAirportsWeight.WeightAirports[j];
 		}
 	}
+	//printf("%d\n",AllAirportsWeight.weightSum);
 }
 int Setting(int AirPlaneTypei, int AirPlaneNum, int *Begin_Airports,int *involeAirports,int Passport)
 {
     int i,k;
-	struct randomStruct rsTemp1;
-	rsTemp1.WeightAirports = (int *)malloc(sizeof(int)*AirportsNum);
-	memset(rsTemp1.WeightAirports, 0, sizeof(int)*AirportsNum);
+	for (i = 0; i < AirportsNum; i++) {
+		AllAirportsWeight.WeightAirports[i] = 0;
+	}
+	AllAirportsWeight.weightSum = 0;
     for(i=0;i<AirportsNum;i++){
         involeAirports[i]=0;
     }
@@ -667,7 +682,8 @@ int Setting(int AirPlaneTypei, int AirPlaneNum, int *Begin_Airports,int *involeA
         involeAirports[Passport]=1;
     }
     involeAirports[Begin_Airports[0]]=involeAirports[Begin_Airports[1]]=1;
-
+	UpdateWeight(Begin_Airports[0], AirPlaneTypei, involeAirports);
+	UpdateWeight(Begin_Airports[1], AirPlaneTypei, involeAirports);
     if(AirPlaneTypei==1){
         if(AirPlaneNum==2){
             involeAirports[20]=involeAirports[19]=involeAirports[29]=1;
@@ -695,16 +711,15 @@ int Setting(int AirPlaneTypei, int AirPlaneNum, int *Begin_Airports,int *involeA
     if(AirPlaneTypei==2){
         int BaseAirports[5]={5,14,15,17,25};
         if(AirPlaneNum==2){
-			for (i = 0; i < AirportsNum; i++) {
-				AllAirportsWeight.WeightAirports[i] = 0;
+			for (k = 0; k < 2; k++) {
+				i = BaseAirports[rand() % 5];
+				involeAirports[i] = 1;
+				UpdateWeight(i, AirPlaneTypei, involeAirports);
 			}
-			AllAirportsWeight.weightSum = 0;
-			i = BaseAirports[rand() % 5];
-            involeAirports[i]=1;
-			UpdateWeight(i,AirPlaneTypei,involeAirports);
 
             for(k=0;k<6;k++){
-				i = RandomByWeight(AllAirportsWeight);
+				i = RandomByWeight();
+				involeAirports[i] = 1;
 				UpdateWeight(i, AirPlaneTypei, involeAirports);
             }
 			for (i = 0; i < AirportsNum; i++) {
@@ -718,17 +733,18 @@ int Setting(int AirPlaneTypei, int AirPlaneNum, int *Begin_Airports,int *involeA
             return 1;
         }
         if(AirPlaneNum==1){
-            involeAirports[BaseAirports[rand()%5]]=1;
-			for (k = 0; k < 8; k++) {
-				
+			for (k = 0; k < 3; k++) {
+				i = BaseAirports[rand() % 5];
+				involeAirports[i] = 1;
+				UpdateWeight(i, AirPlaneTypei, involeAirports);
 			}
-            for(k=0;k<8;k++){
-                do{
-                    i=  RandomByWeight(AllAirportsWeight);
-                }while(involeAirports[i]==1||BanAirports(i));
-                involeAirports[i]=1;
-                
-            }
+
+
+			for (k = 0; k<6; k++) {
+				i = RandomByWeight();
+				involeAirports[i] = 1;
+				UpdateWeight(i, AirPlaneTypei, involeAirports);
+			}
 			for (k = 0; k < AirportsNum; k++) {
 				if (involeAirports[k] == 1) {
 					printf("%d\t", k);
@@ -799,7 +815,7 @@ int FindBestArriveTime(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, 
 		}
 	}
 	for (k = 0; k < supportRecordNum; k++) {
-		if (SupportRecord[k] & routeRecord[RecordNum].record == routeRecord[RecordNum].record)
+		if ( (SupportRecord[k] & routeRecord[RecordNum].record) == routeRecord[RecordNum].record)
 			return -1;
 	}
 	//routeRecord[RecordNum].record = TransAirportsToInterger(involeAirports);

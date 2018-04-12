@@ -26,6 +26,54 @@ int ***HighSpeed; /*航线对应高铁数据 HighSpeed[i][j][2]  出发地i 到达地j [2] -- 
 
 cJSON* GetJsonObject(char* fileName);
 int GetValueString(cJSON* json,int id, char* name, char* param);
+
+char CityIndex[56][20] =
+{
+	"上海","广州","成都","昆明","深圳","西安","重庆","杭州","厦门","南京",
+	"长沙","武汉","郑州","青岛","乌鲁木齐","海口","三亚","天津","哈尔滨","大连",
+	"贵阳","沈阳","济南","福州","南宁","兰州","太原","长春","温州","呼和浩特",
+	"南昌","宁波","合肥","石家庄","丽江","桂林","银川","珠海","无锡","烟台",
+	"西宁","西双版纳","揭阳","泉州","拉萨","绵阳","晋江","大同","阿克苏","伊宁",
+	"遵义","和田","喀什","惠州","安庆","包头"
+};
+
+char CoordinateAirports[32][20] =
+{
+	"上海","广州","成都","昆明","深圳","西安","重庆","杭州","厦门","南京",
+	"长沙","武汉","郑州","青岛","乌鲁木齐","海口","三亚","天津","哈尔滨","大连",
+	"贵阳","沈阳","济南","福州","太原","长春","温州","宁波","石家庄","丽江",
+	"无锡","拉萨"
+};
+
+char TypeIndex[4][5] =
+{
+	"E145","E190","A320","A330"
+};
+
+
+int TypeToindex(char *Te)
+{
+	int i;
+	for (i = 0; i<AirplaneTypeNum; i++) {
+		if (!strcmp(Te, TypeIndex[i])) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+int CityToindex(char *Cy)
+{
+	int i;
+	for (i = 0; i<AirportsNum; i++) {
+		if (!strcmp(Cy, CityIndex[i])) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+
 int ReadAndSetInitial()
 {
 //    FILE *fp;
@@ -44,6 +92,16 @@ int BanAirports(int pointi)
         return 1;
     }
     else return 0 ;
+}
+
+int IsCoordinateAirports(char *Airportsi)
+{
+	int i;
+	for (i = 0; i < 32; i++) {
+		if (!strcmp(Airportsi,CoordinateAirports[i]))
+			return 1;
+	}
+	return 0;
 }
 
 //西安 郑州 海口 天津时刻资源无限
@@ -117,19 +175,26 @@ void ReadAPTFile()
         indexi=A_current->valueint-1;
         A_current = cJSON_GetObjectItem(APT_data, "isBase");
         APT[indexi].isBase=A_current->valueint;
-        APT[indexi].Twn_five=APT[indexi].Twn_hour=-1;
-		Type_list = cJSON_GetObjectItem(APT_data, "typedates");
-        type_size=cJSON_GetArraySize(Type_list);
-		Type_data = Type_list->child;
-        while(Type_data !=NULL){
-            A_current = cJSON_GetObjectItem(Type_data, "index");
-            indexj=A_current->valueint-1;
-            A_current = cJSON_GetObjectItem(Type_data, "passTime");
-            APT[indexi].PassTime[indexj]=A_current->valueint/5;
-            APT[indexi].Passable[indexj]=1;
-			Type_data = Type_data->next;
-        }
+  //      APT[indexi].Twn_five=APT[indexi].Twn_hour=-1;
+		//Type_list = cJSON_GetObjectItem(APT_data, "typedates");
+  //      type_size=cJSON_GetArraySize(Type_list);
+		//Type_data = Type_list->child;
+  //      while(Type_data !=NULL){
+  //          A_current = cJSON_GetObjectItem(Type_data, "index");
+  //          indexj=A_current->valueint-1;
+  //          A_current = cJSON_GetObjectItem(Type_data, "passTime");
+  //          APT[indexi].PassTime[indexj]=A_current->valueint/TimeUnit;
+  //          APT[indexi].Passable[indexj]=1;
+		//	Type_data = Type_data->next;
+  //      }
     }
+	for (i = 0; i < AirportsNum; i++) {
+		APT[i].Twn_five = APT[i].Twn_hour = -1;
+		APT[i].Passable[2] = 1;
+		if(IsCoordinateAirports(CityIndex[i]))
+			APT[i].PassTime[2] = 65/TimeUnit;
+		else APT[i].PassTime[2] = 45 / TimeUnit;
+	}
     if(head)
         cJSON_Delete(head);
     return ;
@@ -160,6 +225,9 @@ void initialsetting()
 		if (!APT[i].PassTime) {
 			perror("malloc APT");
 			exit(-1);
+		}
+		for (j = 0; j < AirplaneTypeNum; j++) {
+			APT[i].PassTime[j] = MaxTime;
 		}
     }
 
@@ -422,16 +490,16 @@ void ReadAPEFile()
 //读取飞行时间矩阵
 void ReadTimeFile()
 {
-    cJSON *head,*Type_data, *Time_list ,*A_current, *Time_data;
+    cJSON *head,*Airline_data, *Time_list ,*A_current, *Time_data;
     int i,j;
     int typei,indexi,indexj;
     int Time_list_size;
     char filename[80];
     strcpy(filename,resourceLocation);
-    strcat(filename,"flightTime.json");
+    strcat(filename,"routeWithTime.json");
     head=GetJsonObject(filename);
-    cJSON *root = cJSON_GetObjectItem(head, "timeMatrices");
-    cJSON *js_list = cJSON_GetObjectItem(root, "type");
+   // cJSON *root = cJSON_GetObjectItem(head, "timeMatrices");
+    cJSON *js_list = cJSON_GetObjectItem(head, "Route");
     if(!js_list){
      printf("no list!\n");
      return ;
@@ -441,32 +509,26 @@ void ReadTimeFile()
 //    char *p=NULL;
 //    cJSON *it;
     for(i=0; i< array_size; i++) {
-        Type_data = cJSON_GetArrayItem(js_list, i);
+		Airline_data = cJSON_GetArrayItem(js_list, i);
 //        p = cJSON_PrintUnformatted(airdata);
 //        it = cJSON_Parse(p);
 //        if(!it)
 //            continue ;
 
-        A_current = cJSON_GetObjectItem(Type_data, "index");
-        typei=A_current->valueint-1;
-		Time_list = cJSON_GetObjectItem(Type_data, "timeArrays");
-		Time_list_size = cJSON_GetArraySize(Time_list);
+        A_current = cJSON_GetObjectItem(Airline_data, "from");
+        indexi=CityToindex(A_current->valuestring);
+		//printf("%s,%d\t", A_current->valuestring, indexi);
+        A_current = cJSON_GetObjectItem(Airline_data, "to");
+        indexj= CityToindex(A_current->valuestring);
+		//printf("%s,%d\n", A_current->valuestring, indexj);
+        A_current = cJSON_GetObjectItem(Airline_data, "timecost");
 
-        for(j=0;j< Time_list_size;j++){
-            Time_data = cJSON_GetArrayItem(Time_list, j);
-
-            A_current = cJSON_GetObjectItem(Time_data, "takeoffAptId");
-            indexi=A_current->valueint-1;
-            A_current = cJSON_GetObjectItem(Time_data, "landatAptId");
-            indexj=A_current->valueint-1;
-            A_current = cJSON_GetObjectItem(Time_data, "time");
-            if(BanAirports(indexi)==0&&BanAirports(indexj)==0){
-                RTime[typei][indexi][indexj]=(A_current->valueint)/TimeUnit;
-                QARTime[typei][indexi][indexj]=(A_current->valueint)/TimeUnit;
-                BanAirline[typei][indexi][indexj]=0;
-            }
-
+        if(BanAirports(indexi)==0&&BanAirports(indexj)==0){
+             RTime[2][indexi][indexj]=(A_current->valueint)/TimeUnit;
+             QARTime[2][indexi][indexj]=(A_current->valueint)/TimeUnit;
+             BanAirline[2][indexi][indexj]=0;
         }
+        
     }
     if(head)
         cJSON_Delete(head);
@@ -486,7 +548,7 @@ void ReadValueFile()
     int time_size;
     char filename[80];
     strcpy(filename,resourceLocation);
-    strcat(filename,"value_320.json");
+    strcat(filename,"final_full.json");
     head=GetJsonObject(filename);
     //cJSON *root = cJSON_GetObjectItem(head, "valueMatrices");
     cJSON *js_list = cJSON_GetObjectItem(head, "type");
@@ -506,26 +568,25 @@ void ReadValueFile()
 //            continue ;
 
         A_current = cJSON_GetObjectItem(Type_data, "index");
-        typei=A_current->valueint-1;
+        typei=TypeToindex(A_current->valuestring);
 		Airline_list = cJSON_GetObjectItem(Type_data, "airline");
         airline_list_size = cJSON_GetArraySize(Airline_list);
 
         for(j=0;j< airline_list_size;j++){
 			Airline_data = cJSON_GetArrayItem(Airline_list, j);
-
             A_current = cJSON_GetObjectItem(Airline_data, "from");
-            indexi=A_current->valueint-1;
+            indexi=CityToindex(A_current->valuestring);
             A_current = cJSON_GetObjectItem(Airline_data, "to");
-            indexj=A_current->valueint-1;
+            indexj= CityToindex(A_current->valuestring);
 			Time_list = cJSON_GetObjectItem(Airline_data, "valueMatrix");
             time_size = cJSON_GetArraySize(Time_list);
             for(k=0;k<time_size;k++){
 				Time_data =  cJSON_GetArrayItem(Time_list, k);
 
                 A_current = cJSON_GetObjectItem(Time_data, "begin");
-                timei = A_current->valueint/5;
+                timei = A_current->valueint/TimeUnit;
                 A_current = cJSON_GetObjectItem(Time_data, "end");
-                timej = A_current->valueint/5;
+                timej = A_current->valueint/ TimeUnit;
                 A_current = cJSON_GetObjectItem(Time_data, "value");
                 for(t1=timei;t1<timej;t1++){
                    // printf("%d %d %d %d %d\n",typei,indexi,indexj,t1,A_current->valueint);
@@ -549,7 +610,7 @@ void ReadCAirline()
     strcpy(filename,resourceLocation);
     strcat(filename,"route.json");
     head=GetJsonObject(filename);
-    cJSON *js_list = cJSON_GetObjectItem(head, "Airline");
+    cJSON *js_list = cJSON_GetObjectItem(head, "Route");
     if(!js_list){
         printf("no list!\n");
         return ;
@@ -571,9 +632,7 @@ void ReadCAirline()
         A_current = cJSON_GetObjectItem(Type_data, "to");
         apj= CityToindex(A_current->valuestring);
 
-        A_current = cJSON_GetObjectItem(Type_data, "pass");
-        passNum = A_current->valueint;
-        AirPassNum[api][apj]=passNum;
+        AirPassNum[api][apj]+=1;
     }
     if(head)
         cJSON_Delete(head);
@@ -757,7 +816,7 @@ void ReadHighSpeed()
     int api, apj;
     char filename[80];
     strcpy(filename,resourceLocation);
-    strcat(filename,"0803highSpeed.json");
+    strcat(filename,"GT_data.json");
     head=GetJsonObject(filename);
     cJSON *js_list = cJSON_GetObjectItem(head, "info");
     if(!js_list){
@@ -776,11 +835,11 @@ void ReadHighSpeed()
 //            continue ;
 
         A_current = cJSON_GetObjectItem(Airline_data, "from");
-        api=A_current->valueint-1;
-
+		api = CityToindex(A_current->valuestring);
+		//printf("%d %s\t", api, A_current->valuestring);
         A_current = cJSON_GetObjectItem(Airline_data, "to");
-        apj = A_current->valueint-1;
-
+        apj = CityToindex(A_current->valuestring);;
+		//printf("%d %s\t", apj, A_current->valuestring);
         A_current = cJSON_GetObjectItem(Airline_data, "freq");
         HighSpeed[api][apj][0]=A_current->valueint;
 

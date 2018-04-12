@@ -4,43 +4,6 @@
 #include<stdlib.h>
 #include<time.h>
 FILE *LogFile;
-char CityIndex[56][20]=
-{
-    "上海","广州","成都","昆明","深圳","西安","重庆","杭州","厦门","南京",
-    "长沙","武汉","郑州","青岛","乌鲁木齐","海口","三亚","天津","哈尔滨",
-    "大连","贵阳","沈阳","济南","福州","南宁","兰州","太原","长春",
-    "温州","呼和浩特","南昌","宁波","合肥","石家庄","丽江","桂林","银川","珠海",
-    "无锡","烟台","西宁","西双版纳","揭阳","泉州","拉萨","绵阳","晋江","大同","阿克苏",
-	"伊宁","遵义","和田","喀什","惠州","安庆","包头"
-};
-
-char TypeIndex[4][5]=
-{
-    "E145","E190","A320","A330"
-};
-
-
-int TypeToindex(char *Te)
-{
-    int i;
-    for(i=0;i<46;i++){
-        if(!strcmp(Te,TypeIndex[i])){
-            return i;
-        }
-    }
-    return -1;
-}
-
-int CityToindex(char *Cy)
-{
-    int i;
-    for(i=0;i<46;i++){
-        if(!strcmp(Cy,CityIndex[i])){
-            return i;
-        }
-    }
-    return -1;
-}
 
 int TimetoIndex(char *Tx)
 {
@@ -162,7 +125,8 @@ void printfRecord(struct solution *Nsol, int i)
 			printf("%-20s\t", CityIndex[Nsol->AirlineArray[j][k * 4]]);
 			printf("%-10s\t", MyItoa(Nsol->AirlineArray[j][k * 4 + 2], timestring));
 			printf("%-20s\t", MyItoa(Nsol->AirlineArray[j][k * 4 + 3], timestring));
-			printf("%s\n", CityIndex[Nsol->AirlineArray[j][k * 4 + 1]]);
+			printf("%s\t", CityIndex[Nsol->AirlineArray[j][k * 4 + 1]]);
+			printf("%d %d %d\n", ValueMatrix[Nsol->PlanesType][Nsol->AirlineArray[j][k * 4]][Nsol->AirlineArray[j][k * 4 + 1]][Nsol->AirlineArray[j][k * 4 + 2]], HighSpeed[Nsol->AirlineArray[j][k * 4]][Nsol->AirlineArray[j][k * 4 + 1]][0], HighSpeed[Nsol->AirlineArray[j][k * 4]][Nsol->AirlineArray[j][k * 4 + 1]][1]);
 			// printf("%s\t",AirportsIndex[Nsol->AirlineArray[j][k*4]]);
 			//  printf("%s\t",AirportsIndex[Nsol->AirlineArray[j][k*4+1]]);
 		}
@@ -190,7 +154,8 @@ int outFILEIn(char *filename, int NowrecordNum, int LastrecordNum)
                    fprintf(fp,"%-20s\t",CityIndex[routeRecord[i].AirlineArray[j][k*4]]);
                    fprintf(fp,"%-10s\t",MyItoa(routeRecord[i].AirlineArray[j][k*4+2],timestring));
                    fprintf(fp,"%-20s\t",MyItoa(routeRecord[i].AirlineArray[j][k*4+3],timestring));
-                   fprintf(fp,"%s\n",CityIndex[routeRecord[i].AirlineArray[j][k*4+1]]);
+                   fprintf(fp,"%s\t",CityIndex[routeRecord[i].AirlineArray[j][k*4+1]]);
+				   fprintf(fp, "%d %d %d\n", ValueMatrix[routeRecord[i].PlanesType][routeRecord[i].AirlineArray[j][k * 4]][routeRecord[i].AirlineArray[j][k * 4 + 1]][routeRecord[i].AirlineArray[j][k * 4 + 2]], HighSpeed[routeRecord[i].AirlineArray[j][k * 4]][routeRecord[i].AirlineArray[j][k * 4 + 1]][0], HighSpeed[routeRecord[i].AirlineArray[j][k * 4]][routeRecord[i].AirlineArray[j][k * 4 + 1]][1]);
                   // printf("%s\t",AirportsIndex[routeRecord[i].AirlineArray[j][k*4]]);
                  //  printf("%s\t",AirportsIndex[routeRecord[i].AirlineArray[j][k*4+1]]);
                 }
@@ -221,6 +186,7 @@ void outFile(char *filename)
                    fprintf(fp,"%-10s\t",MyItoa(routeRecord[i].AirlineArray[j][k*4+2],timestring));
                    fprintf(fp,"%-20s\t",MyItoa(routeRecord[i].AirlineArray[j][k*4+3],timestring));
                    fprintf(fp,"%s\n",CityIndex[routeRecord[i].AirlineArray[j][k*4+1]]);
+				   fprintf(fp, "%d %d %d\n", ValueMatrix[routeRecord[i].PlanesType][routeRecord[i].AirlineArray[j][k * 4]][routeRecord[i].AirlineArray[j][k * 4 + 1]][routeRecord[i].AirlineArray[j][k * 4 + 2]], HighSpeed[routeRecord[i].AirlineArray[j][k * 4]][routeRecord[i].AirlineArray[j][k * 4 + 1]][0], HighSpeed[routeRecord[i].AirlineArray[j][k * 4]][routeRecord[i].AirlineArray[j][k * 4 + 1]][1]);
                   // printf("%s\t",AirportsIndex[routeRecord[i].AirlineArray[j][k*4]]);
                  //  printf("%s\t",AirportsIndex[routeRecord[i].AirlineArray[j][k*4+1]]);
                 }

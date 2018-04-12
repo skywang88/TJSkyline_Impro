@@ -1,0 +1,1034 @@
+{
+    "Route": [
+        {
+            "from": "天津",
+            "to": "三亚",
+            "timecost": 230
+        },
+        {
+            "from": "天津",
+            "to": "三亚",
+            "timecost": 230
+        },
+        {
+            "from": "天津",
+            "to": "三亚",
+            "timecost": 235
+        },
+        {
+            "from": "三亚",
+            "to": "天津",
+            "timecost": 220
+        },
+        {
+            "from": "海口",
+            "to": "重庆",
+            "timecost": 135
+        },
+        {
+            "from": "重庆",
+            "to": "海口",
+            "timecost": 125
+        },
+        {
+            "from": "重庆",
+            "to": "海口",
+            "timecost": 130
+        },
+        {
+            "from": "海口",
+            "to": "晋江",
+            "timecost": 110
+        },
+        {
+            "from": "晋江",
+            "to": "合肥",
+            "timecost": 100
+        },
+        {
+            "from": "合肥",
+            "to": "晋江",
+            "timecost": 105
+        },
+        {
+            "from": "晋江",
+            "to": "海口",
+            "timecost": 110
+        },
+        {
+            "from": "海口",
+            "to": "南京",
+            "timecost": 150
+        },
+        {
+            "from": "海口",
+            "to": "南京",
+            "timecost": 145
+        },
+        {
+            "from": "南京",
+            "to": "海口",
+            "timecost": 165
+        },
+        {
+            "from": "海口",
+            "to": "郑州",
+            "timecost": 170
+        },
+        {
+            "from": "郑州",
+            "to": "海口",
+            "timecost": 180
+        },
+        {
+            "from": "天津",
+            "to": "大同",
+            "timecost": 85
+        },
+        {
+            "from": "大同",
+            "to": "海口",
+            "timecost": 215
+        },
+        {
+            "from": "天津",
+            "to": "大同",
+            "timecost": 85
+        },
+        {
+            "from": "大同",
+            "to": "海口",
+            "timecost": 215
+        },
+        {
+            "from": "海口",
+            "to": "大同",
+            "timecost": 205
+        },
+        {
+            "from": "大同",
+            "to": "天津",
+            "timecost": 85
+        },
+        {
+            "from": "海口",
+            "to": "大同",
+            "timecost": 205
+        },
+        {
+            "from": "大同",
+            "to": "天津",
+            "timecost": 85
+        },
+        {
+            "from": "海口",
+            "to": "武汉",
+            "timecost": 130
+        },
+        {
+            "from": "武汉",
+            "to": "天津",
+            "timecost": 120
+        },
+        {
+            "from": "天津",
+            "to": "武汉",
+            "timecost": 125
+        },
+        {
+            "from": "武汉",
+            "to": "海口",
+            "timecost": 145
+        },
+        {
+            "from": "海口",
+            "to": "昆明",
+            "timecost": 110
+        },
+        {
+            "from": "昆明",
+            "to": "海口",
+            "timecost": 110
+        },
+        {
+            "from": "昆明",
+            "to": "海口",
+            "timecost": 120
+        },
+        {
+            "from": "昆明",
+            "to": "海口",
+            "timecost": 110
+        },
+        {
+            "from": "海口",
+            "to": "杭州",
+            "timecost": 155
+        },
+        {
+            "from": "杭州",
+            "to": "海口",
+            "timecost": 160
+        },
+        {
+            "from": "重庆",
+            "to": "南昌",
+            "timecost": 100
+        },
+        {
+            "from": "南昌",
+            "to": "重庆",
+            "timecost": 115
+        },
+        {
+            "from": "重庆",
+            "to": "合肥",
+            "timecost": 105
+        },
+        {
+            "from": "合肥",
+            "to": "重庆",
+            "timecost": 130
+        },
+        {
+            "from": "重庆",
+            "to": "青岛",
+            "timecost": 155
+        },
+        {
+            "from": "青岛",
+            "to": "重庆",
+            "timecost": 190
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "西安",
+            "timecost": 200
+        },
+        {
+            "from": "西安",
+            "to": "海口",
+            "timecost": 175
+        },
+        {
+            "from": "海口",
+            "to": "西安",
+            "timecost": 175
+        },
+        {
+            "from": "西安",
+            "to": "乌鲁木齐",
+            "timecost": 225
+        },
+        {
+            "from": "海口",
+            "to": "西安",
+            "timecost": 180
+        },
+        {
+            "from": "西安",
+            "to": "乌鲁木齐",
+            "timecost": 225
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "长沙",
+            "timecost": 250
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "长沙",
+            "timecost": 260
+        },
+        {
+            "from": "长沙",
+            "to": "乌鲁木齐",
+            "timecost": 285
+        },
+        {
+            "from": "长沙",
+            "to": "乌鲁木齐",
+            "timecost": 280
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "阿克苏",
+            "timecost": 85
+        },
+        {
+            "from": "阿克苏",
+            "to": "乌鲁木齐",
+            "timecost": 75
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "阿克苏",
+            "timecost": 90
+        },
+        {
+            "from": "阿克苏",
+            "to": "乌鲁木齐",
+            "timecost": 75
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "阿克苏",
+            "timecost": 85
+        },
+        {
+            "from": "阿克苏",
+            "to": "乌鲁木齐",
+            "timecost": 80
+        },
+        {
+            "from": "阿克苏",
+            "to": "乌鲁木齐",
+            "timecost": 75
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "郑州",
+            "timecost": 240
+        },
+        {
+            "from": "郑州",
+            "to": "乌鲁木齐",
+            "timecost": 265
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "兰州",
+            "timecost": 160
+        },
+        {
+            "from": "兰州",
+            "to": "广州",
+            "timecost": 185
+        },
+        {
+            "from": "广州",
+            "to": "兰州",
+            "timecost": 200
+        },
+        {
+            "from": "兰州",
+            "to": "乌鲁木齐",
+            "timecost": 165
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "西安",
+            "timecost": 210
+        },
+        {
+            "from": "西安",
+            "to": "三亚",
+            "timecost": 210
+        },
+        {
+            "from": "三亚",
+            "to": "西安",
+            "timecost": 175
+        },
+        {
+            "from": "西安",
+            "to": "乌鲁木齐",
+            "timecost": 220
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "郑州",
+            "timecost": 230
+        },
+        {
+            "from": "郑州",
+            "to": "海口",
+            "timecost": 180
+        },
+        {
+            "from": "海口",
+            "to": "郑州",
+            "timecost": 165
+        },
+        {
+            "from": "郑州",
+            "to": "乌鲁木齐",
+            "timecost": 265
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "伊宁",
+            "timecost": 80
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "伊宁",
+            "timecost": 80
+        },
+        {
+            "from": "伊宁",
+            "to": "乌鲁木齐",
+            "timecost": 75
+        },
+        {
+            "from": "西安",
+            "to": "遵义",
+            "timecost": 95
+        },
+        {
+            "from": "遵义",
+            "to": "三亚",
+            "timecost": 115
+        },
+        {
+            "from": "三亚",
+            "to": "遵义",
+            "timecost": 135
+        },
+        {
+            "from": "遵义",
+            "to": "西安",
+            "timecost": 105
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "和田",
+            "timecost": 120
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "和田",
+            "timecost": 120
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "和田",
+            "timecost": 120
+        },
+        {
+            "from": "和田",
+            "to": "乌鲁木齐",
+            "timecost": 115
+        },
+        {
+            "from": "和田",
+            "to": "乌鲁木齐",
+            "timecost": 115
+        },
+        {
+            "from": "和田",
+            "to": "乌鲁木齐",
+            "timecost": 100
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "和田",
+            "timecost": 120
+        },
+        {
+            "from": "和田",
+            "to": "乌鲁木齐",
+            "timecost": 105
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "喀什",
+            "timecost": 115
+        },
+        {
+            "from": "喀什",
+            "to": "乌鲁木齐",
+            "timecost": 105
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "喀什",
+            "timecost": 120
+        },
+        {
+            "from": "喀什",
+            "to": "乌鲁木齐",
+            "timecost": 110
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "喀什",
+            "timecost": 115
+        },
+        {
+            "from": "喀什",
+            "to": "乌鲁木齐",
+            "timecost": 110
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "重庆",
+            "timecost": 230
+        },
+        {
+            "from": "重庆",
+            "to": "乌鲁木齐",
+            "timecost": 250
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "天津",
+            "timecost": 225
+        },
+        {
+            "from": "天津",
+            "to": "长春",
+            "timecost": 125
+        },
+        {
+            "from": "长春",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "天津",
+            "to": "乌鲁木齐",
+            "timecost": 260
+        },
+        {
+            "from": "长春",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "天津",
+            "to": "乌鲁木齐",
+            "timecost": 260
+        },
+        {
+            "from": "长春",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "天津",
+            "to": "乌鲁木齐",
+            "timecost": 260
+        },
+        {
+            "from": "长春",
+            "to": "天津",
+            "timecost": 105
+        },
+        {
+            "from": "天津",
+            "to": "乌鲁木齐",
+            "timecost": 260
+        },
+        {
+            "from": "西安",
+            "to": "天津",
+            "timecost": 115
+        },
+        {
+            "from": "天津",
+            "to": "哈尔滨",
+            "timecost": 120
+        },
+        {
+            "from": "哈尔滨",
+            "to": "天津",
+            "timecost": 120
+        },
+        {
+            "from": "天津",
+            "to": "西安",
+            "timecost": 130
+        },
+        {
+            "from": "西安",
+            "to": "惠州",
+            "timecost": 170
+        },
+        {
+            "from": "惠州",
+            "to": "海口",
+            "timecost": 80
+        },
+        {
+            "from": "西安",
+            "to": "惠州",
+            "timecost": 170
+        },
+        {
+            "from": "惠州",
+            "to": "海口",
+            "timecost": 80
+        },
+        {
+            "from": "西安",
+            "to": "惠州",
+            "timecost": 170
+        },
+        {
+            "from": "惠州",
+            "to": "海口",
+            "timecost": 80
+        },
+        {
+            "from": "西安",
+            "to": "惠州",
+            "timecost": 170
+        },
+        {
+            "from": "惠州",
+            "to": "海口",
+            "timecost": 75
+        },
+        {
+            "from": "海口",
+            "to": "惠州",
+            "timecost": 75
+        },
+        {
+            "from": "惠州",
+            "to": "西安",
+            "timecost": 155
+        },
+        {
+            "from": "西安",
+            "to": "南宁",
+            "timecost": 155
+        },
+        {
+            "from": "南宁",
+            "to": "西安",
+            "timecost": 135
+        },
+        {
+            "from": "西安",
+            "to": "安庆",
+            "timecost": 125
+        },
+        {
+            "from": "安庆",
+            "to": "厦门",
+            "timecost": 95
+        },
+        {
+            "from": "厦门",
+            "to": "安庆",
+            "timecost": 90
+        },
+        {
+            "from": "安庆",
+            "to": "西安",
+            "timecost": 115
+        },
+        {
+            "from": "西安",
+            "to": "南京",
+            "timecost": 110
+        },
+        {
+            "from": "南京",
+            "to": "西安",
+            "timecost": 120
+        },
+        {
+            "from": "西安",
+            "to": "重庆",
+            "timecost": 95
+        },
+        {
+            "from": "重庆",
+            "to": "西安",
+            "timecost": 85
+        },
+        {
+            "from": "西安",
+            "to": "杭州",
+            "timecost": 125
+        },
+        {
+            "from": "西安",
+            "to": "杭州",
+            "timecost": 125
+        },
+        {
+            "from": "杭州",
+            "to": "西安",
+            "timecost": 150
+        },
+        {
+            "from": "杭州",
+            "to": "西安",
+            "timecost": 150
+        },
+        {
+            "from": "西安",
+            "to": "遵义",
+            "timecost": 95
+        },
+        {
+            "from": "遵义",
+            "to": "厦门",
+            "timecost": 115
+        },
+        {
+            "from": "厦门",
+            "to": "遵义",
+            "timecost": 145
+        },
+        {
+            "from": "遵义",
+            "to": "西安",
+            "timecost": 95
+        },
+        {
+            "from": "天津",
+            "to": "温州",
+            "timecost": 140
+        },
+        {
+            "from": "天津",
+            "to": "温州",
+            "timecost": 140
+        },
+        {
+            "from": "天津",
+            "to": "温州",
+            "timecost": 135
+        },
+        {
+            "from": "温州",
+            "to": "天津",
+            "timecost": 150
+        },
+        {
+            "from": "温州",
+            "to": "天津",
+            "timecost": 160
+        },
+        {
+            "from": "温州",
+            "to": "天津",
+            "timecost": 145
+        },
+        {
+            "from": "天津",
+            "to": "青岛",
+            "timecost": 70
+        },
+        {
+            "from": "青岛",
+            "to": "温州",
+            "timecost": 120
+        },
+        {
+            "from": "温州",
+            "to": "青岛",
+            "timecost": 120
+        },
+        {
+            "from": "青岛",
+            "to": "天津",
+            "timecost": 65
+        },
+        {
+            "from": "天津",
+            "to": "长沙",
+            "timecost": 145
+        },
+        {
+            "from": "长沙",
+            "to": "遵义",
+            "timecost": 95
+        },
+        {
+            "from": "遵义",
+            "to": "长沙",
+            "timecost": 85
+        },
+        {
+            "from": "长沙",
+            "to": "天津",
+            "timecost": 125
+        },
+        {
+            "from": "天津",
+            "to": "乌鲁木齐",
+            "timecost": 265
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "和田",
+            "timecost": 110
+        },
+        {
+            "from": "和田",
+            "to": "乌鲁木齐",
+            "timecost": 105
+        },
+        {
+            "from": "乌鲁木齐",
+            "to": "天津",
+            "timecost": 230
+        },
+        {
+            "from": "天津",
+            "to": "杭州",
+            "timecost": 110
+        },
+        {
+            "from": "杭州",
+            "to": "天津",
+            "timecost": 130
+        },
+        {
+            "from": "天津",
+            "to": "杭州",
+            "timecost": 130
+        },
+        {
+            "from": "杭州",
+            "to": "天津",
+            "timecost": 125
+        },
+        {
+            "from": "天津",
+            "to": "昆明",
+            "timecost": 220
+        },
+        {
+            "from": "昆明",
+            "to": "天津",
+            "timecost": 195
+        },
+        {
+            "from": "天津",
+            "to": "西安",
+            "timecost": 115
+        },
+        {
+            "from": "西安",
+            "to": "昆明",
+            "timecost": 140
+        },
+        {
+            "from": "天津",
+            "to": "西安",
+            "timecost": 130
+        },
+        {
+            "from": "西安",
+            "to": "昆明",
+            "timecost": 140
+        },
+        {
+            "from": "昆明",
+            "to": "西安",
+            "timecost": 135
+        },
+        {
+            "from": "西安",
+            "to": "天津",
+            "timecost": 105
+        },
+        {
+            "from": "昆明",
+            "to": "西安",
+            "timecost": 135
+        },
+        {
+            "from": "西安",
+            "to": "天津",
+            "timecost": 105
+        },
+        {
+            "from": "昆明",
+            "to": "西安",
+            "timecost": 135
+        },
+        {
+            "from": "西安",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "天津",
+            "to": "武汉",
+            "timecost": 130
+        },
+        {
+            "from": "武汉",
+            "to": "海口",
+            "timecost": 145
+        },
+        {
+            "from": "海口",
+            "to": "武汉",
+            "timecost": 145
+        },
+        {
+            "from": "武汉",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "海口",
+            "to": "武汉",
+            "timecost": 130
+        },
+        {
+            "from": "武汉",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "海口",
+            "to": "武汉",
+            "timecost": 145
+        },
+        {
+            "from": "武汉",
+            "to": "天津",
+            "timecost": 110
+        },
+        {
+            "from": "天津",
+            "to": "海口",
+            "timecost": 220
+        },
+        {
+            "from": "海口",
+            "to": "天津",
+            "timecost": 210
+        },
+        {
+            "from": "天津",
+            "to": "三亚",
+            "timecost": 225
+        },
+        {
+            "from": "天津",
+            "to": "三亚",
+            "timecost": 255
+        },
+        {
+            "from": "三亚",
+            "to": "天津",
+            "timecost": 220
+        },
+        {
+            "from": "天津",
+            "to": "遵义",
+            "timecost": 160
+        },
+        {
+            "from": "遵义",
+            "to": "桂林",
+            "timecost": 70
+        },
+        {
+            "from": "桂林",
+            "to": "遵义",
+            "timecost": 70
+        },
+        {
+            "from": "遵义",
+            "to": "天津",
+            "timecost": 145
+        },
+        {
+            "from": "天津",
+            "to": "上海",
+            "timecost": 125
+        },
+        {
+            "from": "上海",
+            "to": "天津",
+            "timecost": 140
+        },
+        {
+            "from": "天津",
+            "to": "上海",
+            "timecost": 125
+        },
+        {
+            "from": "上海",
+            "to": "天津",
+            "timecost": 140
+        },
+        {
+            "from": "天津",
+            "to": "成都",
+            "timecost": 180
+        },
+        {
+            "from": "成都",
+            "to": "天津",
+            "timecost": 150
+        },
+        {
+            "from": "厦门",
+            "to": "天津",
+            "timecost": 160
+        },
+        {
+            "from": "天津",
+            "to": "宁波",
+            "timecost": 130
+        },
+        {
+            "from": "宁波",
+            "to": "天津",
+            "timecost": 130
+        },
+        {
+            "from": "天津",
+            "to": "福州",
+            "timecost": 150
+        },
+        {
+            "from": "福州",
+            "to": "天津",
+            "timecost": 165
+        },
+        {
+            "from": "天津",
+            "to": "西安",
+            "timecost": 140
+        },
+        {
+            "from": "西安",
+            "to": "贵阳",
+            "timecost": 110
+        },
+        {
+            "from": "贵阳",
+            "to": "西安",
+            "timecost": 110
+        },
+        {
+            "from": "西安",
+            "to": "天津",
+            "timecost": 100
+        },
+        {
+            "from": "包头",
+            "to": "天津",
+            "timecost": 90
+        },
+        {
+            "from": "天津",
+            "to": "昆明",
+            "timecost": 220
+        },
+        {
+            "from": "昆明",
+            "to": "天津",
+            "timecost": 195
+        },
+        {
+            "from": "昆明",
+            "to": "天津",
+            "timecost": 205
+        }
+    ]
+}

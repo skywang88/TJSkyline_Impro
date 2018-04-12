@@ -70,6 +70,10 @@ extern int ***OSeatAmount;
 extern int **AirPassNum;
 
 extern int ***HighSpeed;
+extern char CityIndex[56][20];
+int TypeToindex(char *Te);
+int CityToindex(char *Cy);
+
 
 
 

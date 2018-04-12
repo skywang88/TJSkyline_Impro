@@ -1,0 +1,319 @@
+{
+    "info": [
+        {
+            "from": "上海", 
+            "to": "天津", 
+            "freq": 22, 
+            "timecost": 5, 
+            "price": 511
+        }, 
+        {
+            "from": "兰州", 
+            "to": "广州", 
+            "freq": 1, 
+            "timecost": 12, 
+            "price": 988
+        }, 
+        {
+            "from": "南京", 
+            "to": "西安", 
+            "freq": 14, 
+            "timecost": 5, 
+            "price": 540
+        }, 
+        {
+            "from": "南昌", 
+            "to": "重庆", 
+            "freq": 3, 
+            "timecost": 7, 
+            "price": 578
+        }, 
+        {
+            "from": "厦门", 
+            "to": "天津", 
+            "freq": 1, 
+            "timecost": 11, 
+            "price": 764
+        }, 
+        {
+            "from": "哈尔滨", 
+            "to": "天津", 
+            "freq": 8, 
+            "timecost": 6, 
+            "price": 492
+        }, 
+        {
+            "from": "哈尔滨", 
+            "to": "天津", 
+            "freq": 1, 
+            "timecost": 7, 
+            "price": 468
+        }, 
+        {
+            "from": "天津", 
+            "to": "上海", 
+            "freq": 1, 
+            "timecost": 4, 
+            "price": 513
+        }, 
+        {
+            "from": "天津", 
+            "to": "上海", 
+            "freq": 20, 
+            "timecost": 5, 
+            "price": 511
+        }, 
+        {
+            "from": "天津", 
+            "to": "厦门", 
+            "freq": 1, 
+            "timecost": 11, 
+            "price": 764
+        }, 
+        {
+            "from": "天津", 
+            "to": "哈尔滨", 
+            "freq": 9, 
+            "timecost": 6, 
+            "price": 492
+        }, 
+        {
+            "from": "天津", 
+            "to": "成都", 
+            "freq": 2, 
+            "timecost": 10, 
+            "price": 787
+        }, 
+        {
+            "from": "天津", 
+            "to": "杭州", 
+            "freq": 9, 
+            "timecost": 5, 
+            "price": 506
+        }, 
+        {
+            "from": "天津", 
+            "to": "武汉", 
+            "freq": 6, 
+            "timecost": 6, 
+            "price": 548
+        }, 
+        {
+            "from": "天津", 
+            "to": "温州", 
+            "freq": 3, 
+            "timecost": 8, 
+            "price": 659
+        }, 
+        {
+            "from": "天津", 
+            "to": "福州", 
+            "freq": 4, 
+            "timecost": 8, 
+            "price": 680
+        }, 
+        {
+            "from": "天津", 
+            "to": "西安", 
+            "freq": 5, 
+            "timecost": 6, 
+            "price": 523
+        }, 
+        {
+            "from": "天津", 
+            "to": "长春", 
+            "freq": 17, 
+            "timecost": 5, 
+            "price": 388
+        }, 
+        {
+            "from": "天津", 
+            "to": "长沙", 
+            "freq": 2, 
+            "timecost": 8, 
+            "price": 662
+        }, 
+        {
+            "from": "天津", 
+            "to": "青岛", 
+            "freq": 11, 
+            "timecost": 4, 
+            "price": 262
+        }, 
+        {
+            "from": "宁波", 
+            "to": "天津", 
+            "freq": 4, 
+            "timecost": 7, 
+            "price": 554
+        }, 
+        {
+            "from": "广州", 
+            "to": "兰州", 
+            "freq": 1, 
+            "timecost": 11, 
+            "price": 988
+        }, 
+        {
+            "from": "成都", 
+            "to": "天津", 
+            "freq": 2, 
+            "timecost": 10, 
+            "price": 787
+        }, 
+        {
+            "from": "晋江", 
+            "to": "合肥", 
+            "freq": 5, 
+            "timecost": 5, 
+            "price": 425
+        }, 
+        {
+            "from": "杭州", 
+            "to": "西安", 
+            "freq": 4, 
+            "timecost": 7, 
+            "price": 653
+        }, 
+        {
+            "from": "武汉", 
+            "to": "天津", 
+            "freq": 8, 
+            "timecost": 6, 
+            "price": 544
+        }, 
+        {
+            "from": "温州", 
+            "to": "天津", 
+            "freq": 4, 
+            "timecost": 9, 
+            "price": 656
+        }, 
+        {
+            "from": "天津", 
+            "to": "武汉", 
+            "freq": 2, 
+            "timecost": 6, 
+            "price": 544
+        }, 
+        {
+            "from": "福州", 
+            "to": "天津", 
+            "freq": 6, 
+            "timecost": 9, 
+            "price": 691
+        }, 
+        {
+            "from": "西安", 
+            "to": "南京", 
+            "freq": 13, 
+            "timecost": 5, 
+            "price": 540
+        }, 
+        {
+            "from": "西安", 
+            "to": "天津", 
+            "freq": 4, 
+            "timecost": 6, 
+            "price": 526
+        }, 
+        {
+            "from": "西安", 
+            "to": "杭州", 
+            "freq": 4, 
+            "timecost": 7, 
+            "price": 653
+        }, 
+        {
+            "from": "西安", 
+            "to": "重庆", 
+            "freq": 5, 
+            "timecost": 5, 
+            "price": 409
+        }, 
+        {
+            "from": "遵义", 
+            "to": "长沙", 
+            "freq": 4, 
+            "timecost": 4, 
+            "price": 355
+        }, 
+        {
+            "from": "西安", 
+            "to": "南京", 
+            "freq": 1, 
+            "timecost": 7, 
+            "price": 558
+        }, 
+        {
+            "from": "重庆", 
+            "to": "南昌", 
+            "freq": 3, 
+            "timecost": 7, 
+            "price": 578
+        }, 
+        {
+            "from": "重庆", 
+            "to": "西安", 
+            "freq": 3, 
+            "timecost": 5, 
+            "price": 409
+        }, 
+        {
+            "from": "重庆", 
+            "to": "西安", 
+            "freq": 2, 
+            "timecost": 5, 
+            "price": 401
+        }, 
+        {
+            "from": "重庆", 
+            "to": "青岛", 
+            "freq": 2, 
+            "timecost": 15, 
+            "price": 969
+        }, 
+        {
+            "from": "长春", 
+            "to": "天津", 
+            "freq": 15, 
+            "timecost": 5, 
+            "price": 384
+        }, 
+        {
+            "from": "长春", 
+            "to": "天津", 
+            "freq": 2, 
+            "timecost": 5, 
+            "price": 392
+        }, 
+        {
+            "from": "长沙", 
+            "to": "天津", 
+            "freq": 2, 
+            "timecost": 8, 
+            "price": 662
+        }, 
+        {
+            "from": "长沙", 
+            "to": "遵义", 
+            "freq": 4, 
+            "timecost": 4, 
+            "price": 355
+        }, 
+        {
+            "from": "西安", 
+            "to": "天津", 
+            "freq": 1, 
+            "timecost": 6, 
+            "price": 529
+        }, 
+        {
+            "from": "青岛", 
+            "to": "重庆", 
+            "freq": 2, 
+            "timecost": 14, 
+            "price": 969
+        }
+    ]
+}
