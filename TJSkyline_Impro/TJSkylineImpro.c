@@ -8,11 +8,11 @@
 #include <stdlib.h>
 #include<limits.h>
 #include"IO/ReadFile.h"
-#include"route/CreateRoute.h"
+#include"route/CreateRoute.h" 
 #include"IO/Outxqxfile.h"
 #include"Option/Option.h"
 #include"setting\set.h"
-int main(void)
+int main()
 {
 	LogFile = fopen("Runlog.log", "a");
 	srand(time(NULL));
@@ -27,6 +27,8 @@ int main(void)
 		scanf("%d", &mode_int);
 		switch (mode_int) {
 		case 0:
+			ReadSolutionTxt();
+			LocalSearch();
 			return 1;
 		case 1:
 			//                ReadSettingTxt();
@@ -57,4 +59,5 @@ int main(void)
 	}
 	free(routeRecord);
 	fclose(LogFile);
+	return 1;
 }

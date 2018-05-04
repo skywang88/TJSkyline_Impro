@@ -2,13 +2,16 @@
 #define CROUTE_X
 
 #include"../IO/ReadFile.h"
-#define Minner(a,b) (a<b?a:b)
+#include"../IO/OutxqxFile.h"
+#define Min(a,b) (a<b?a:b)
+#define Max(a,b) (a>b?a:b)
 void CRoute();
 void Timeset(int AirPlaneTypei);
 void ReadSettingTxt();
 void ReAddAirlineTxt();
 void Prepare();
 void Handleinformation();
+void LocalSearch();
 int CreateRoute(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, int BaseTypeNum, int Passairports, int ArriveTime);
 int CreateRoute1(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int NeedNum, int PassAirport, int ArriveTime);
 double FindBestmodel(int AirPlaneTypei, int *begin_Airports, int AirPlaneNum, int *involeAirports, int Passairports, int arriveTime);
@@ -34,4 +37,5 @@ extern double lastsolval;
 extern int RecordNum;
 extern int ***AirportsTimeStart;
 extern int ***AirportsTimeEnd;
+extern int **TimeWindows;
 #endif // CROUTE_X

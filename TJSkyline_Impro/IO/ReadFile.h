@@ -8,7 +8,7 @@
 #define TimeUnit (5)
 #define HourTime (60/TimeUnit)
 #define DayTtime (24*60/TimeUnit)
-#define BIGM (100000)
+#define BIGM (10000)
 #define MaxTime (300)
 
 void ReadFile(char *filename);

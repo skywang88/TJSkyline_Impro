@@ -491,14 +491,14 @@ void Handleinformation()
 		}
 	}
 
-	for (i = 0; i<AirportsNum; i++) {
-		for (j = 0; j<AirportsNum; j++) {
-			if (RTime[2][i][j]<18) {
-				BanAirline[2][i][j] = BanAirline[2][i][j] = 1;
-				RTime[2][i][j] = RTime[2][j][i] = MaxTime;
-			}
-		}
-	}
+	//for (i = 0; i<AirportsNum; i++) {
+	//	for (j = 0; j<AirportsNum; j++) {
+	//		if (RTime[2][i][j]<18) {
+	//			BanAirline[2][i][j] = BanAirline[2][i][j] = 1;
+	//			RTime[2][i][j] = RTime[2][j][i] = MaxTime;
+	//		}
+	//	}
+	//}
 
     simpleOptimize();
     for(i=0;i<AirportsNum;i++){
@@ -745,6 +745,9 @@ int Setting(int AirPlaneTypei, int AirPlaneNum, int *Begin_Airports,int *involeA
 				involeAirports[i] = 1;
 				UpdateWeight(i, AirPlaneTypei, involeAirports);
 			}
+			//for (k = 0; k < AirportsNum; k++) {
+			//	involeAirports[k] = 1;
+			//}
 			for (k = 0; k < AirportsNum; k++) {
 				if (involeAirports[k] == 1) {
 					printf("%d\t", k);
@@ -1015,7 +1018,7 @@ int BaseNowAdd(int *addAirports, int MinTime,int LongTime, int *involeAirports, 
     }
 
     int Ad=0;
-    AddAirportsNum=Minner(AddAirportsNum,Knum);
+    AddAirportsNum=Min(AddAirportsNum,Knum);
     for(j=0;j<AddAirportsNum;j++){
         for(i=0,k=0;i<Knum;i++){
             if(sortFre[i]==-1){

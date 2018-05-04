@@ -61,7 +61,6 @@ void MySort(struct solution *Nsol)
 				}
 			}
 		}
-
 	}
 }
 
@@ -198,10 +197,10 @@ int IsMatchConstrait1(int point1, int time1, int direction)
         for(i=0;i<APT[point1].Twn_hour;i++){
             if(time1>=APT[point1].TimeWindows_hour[i*4]
             &&time1<APT[point1].TimeWindows_hour[i*4+1]){
-                if(direction==0&&APT[point1].TimeWindows_hour[i*4+2]>0){
+                if(direction==0&&APT[point1].TimeWindows_hour[i*4+2]-TimeWindows[point1][i*2]>0){
                     return 1;
                 }
-                if(direction==1&&APT[point1].TimeWindows_hour[i*4+3]>0){
+                if(direction==1&&APT[point1].TimeWindows_hour[i*4+3]-TimeWindows[point1][i*2+1]>0){
                     return 1;
                 }
             }
@@ -287,9 +286,9 @@ int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *in
                 }
 
                 for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-					if ((point1 == 5 || point1 == 50 || point1 == 17) && point2 == 16 &&
-						(time1 == 252 || time1 == 120 || time1 == 168))
-						printf("\n");
+					//if ((point1 == 5 || point1 == 50 || point1 == 17) && point2 == 16 &&
+					//	(time1 == 252 || time1 == 120 || time1 == 168))
+					//	printf("\n");
 					if(!IsMatchConstrait1(point1,time1,0)){
                         continue;
                     }
@@ -362,28 +361,6 @@ int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *in
         }
     }
 
-
-	//for (airplane = 0; airplane < AirPlaneNum; airplane++) {
-	//	for (point1 = 0; point1 < AirportsNum; point1++) {
-	//		if (!involeAirports[point1]) {
-	//			continue;
-	//		}
-	//		if (BaseTypeN[[point1][AirPlaneTypei] == 0) {
-	//			continue;
-	//		}
-	//		for (time1 = 14 * 12; time1 < 16 * 12; time1++)
-	//		{
-	//			if (!IsMatchConstrait1(point1, time1, 1)) {
-	//				continue;
-	//			}
-	//			for (time2 = time1 + APT[point1][AirPlaneTypei]; time2 < time1 + APT[point1][AirPlaneTypei]+36; time2++) {
-	//				if (!IsMatchConstrait1(point1, time2, 0)) {
-	//					continue;
-	//				}
-	//			}
-	//		}
-	//	}
-	//}
     Sumv[2]=i;
     Deval=(struct variable *)malloc(sizeof(struct variable)*i);
     sol=(double *)malloc(sizeof(double)*i);

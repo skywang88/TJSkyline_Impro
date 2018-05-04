@@ -4,6 +4,69 @@
 #include"../xqx/transxqx.h"
 
 
+void ReadSolutionTxt()
+{
+	FILE *fp = fopen("Allairline.txt", "rb");
+	int ri;
+	int lastri=-1;
+	int i = -1;
+	char a[1000];
+	char typestring[1000];
+	RecordNum = 0;
+	while (!feof(fp))
+	{
+		fgets(a, 1000, fp);
+		if (!strncmp(a, "****", 4)) {
+			if (fscanf(fp, "%d %s", &ri, typestring) == EOF)
+				break;
+			i++;
+			RecordNum++;
+			int j = 0;
+			routeRecord[i].PlanesNum = 1;
+			routeRecord[i].PlanesType = TypeToindex(typestring);
+			if (ri == lastri) {
+				i--;
+				RecordNum--;
+				j++;
+				routeRecord[i].PlanesNum++;
+			}
+			char strline[1000];
+			int LastEnd = 0;
+			int NowEnd;
+			char cityOne[20];
+			char cityTwo[20];
+			char timeOne[20];
+			char timeTwo[20];
+			lastri = ri;
+			while (!feof(fp)) {
+				fgets(strline, 1000, fp);
+				if (!strncmp(strline, "****", 4)) {
+					fseek(fp, -6, SEEK_CUR);
+					break;
+				}
+				if (strlen(strline) <= 2) {
+					continue;
+				}
+				sscanf(strline, "%s %s %s %s ", cityOne, timeOne, timeTwo, cityTwo);
+				//printf("%s %s %s %s\n", cityOne, timeOne, timeTwo, cityTwo);
+				//if ((NowEnd = TimetoIndex(timeTwo)) < LastEnd) {
+				//	j++;
+				//	routeRecord[i].PlanesNum++;
+				//}
+				routeRecord[i].AirlineArray[j][routeRecord[i].LengthArray[j] * 4] = CityToindex(cityOne);
+				routeRecord[i].AirlineArray[j][routeRecord[i].LengthArray[j] * 4 + 1] = CityToindex(cityTwo);
+				routeRecord[i].AirlineArray[j][routeRecord[i].LengthArray[j] * 4 + 2] = TimetoIndex(timeOne);
+				routeRecord[i].AirlineArray[j][routeRecord[i].LengthArray[j] * 4 + 3] = TimetoIndex(timeTwo);
+				//LastEnd = NowEnd;
+				routeRecord[i].LengthArray[j]++;
+			}
+		}
+
+	}
+
+	printf("%d\n", RecordNum);
+	fclose(fp);
+}
 
 void Readinformation(char *fn)
 {
@@ -19,12 +82,13 @@ void Readinformation(char *fn)
             i++;
             RecordNum++;
             fscanf(fp,"%d %d %d ",&ri,&routeRecord[i].PlanesType,&routeRecord[i].solvalue);
+			//printf("%d %d %d\n", ri, routeRecord[i].PlanesType, routeRecord[i].solvalue);
             routeRecord[i].PlanesNum=1;
             int j=0;
-            if(ri!=i){
-                printf("%d %d\n",i,ri);
-                exit(-1);
-            }
+            //if(ri==582){
+            //    //printf("%d %d\n",i,ri);
+            //   // exit(-1);
+            //}
             char strline[1000];
             int LastEnd=0;
             int NowEnd;
@@ -42,6 +106,7 @@ void Readinformation(char *fn)
                     continue;
                 }
                 sscanf(strline,"%s %s %s %s",cityOne,timeOne,timeTwo,cityTwo);
+				//printf("%s %s %s %s\n", cityOne, timeOne, timeTwo, cityTwo);
                 if((NowEnd=TimetoIndex(timeTwo))<LastEnd){
                     j++;
                     routeRecord[i].PlanesNum++;
@@ -52,6 +117,7 @@ void Readinformation(char *fn)
                 routeRecord[i].AirlineArray[j][routeRecord[i].LengthArray[j]*4+3]=TimetoIndex(timeTwo);
                 LastEnd=NowEnd;
                 routeRecord[i].LengthArray[j]++;
+				fgets(strline, 1000, fp);
             }
         }
 
@@ -283,7 +349,7 @@ void CRoute()
                 if(TypeBaseN[k][j]!=0){
                     BeAirports[0]=i;
                     BeAirports[1]=j;
-                    CreateRoute1(k,BeAirports,2,Minner(TypeBaseN[k][i],TypeBaseN[k][j])*10,-1,Timelong);
+                    CreateRoute1(k,BeAirports,2,Min(TypeBaseN[k][i],TypeBaseN[k][j])*10,-1,Timelong);
                    // printf("3route %d %d %dsuccess\n",k,i,j);
                     write_log(LogFile,1,"3route %d %d %d success\n",k,i,j);
                     LastRecordNum=outFILEIn("airline.txt",RecordNum,LastRecordNum);
@@ -307,6 +373,7 @@ void CRoute()
     printf("success\n");
 
 }
+
 
 int supplement()
 {

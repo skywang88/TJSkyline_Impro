@@ -35,7 +35,7 @@ int similar(int *a, int *b)
 //            return 5000;
 //        }
 //        else return 2500;
-        return 20000000;
+        return 200000;
     }
     else return 0;
 }
@@ -76,10 +76,7 @@ void calculateXMatrix()
     for(i=0;i<RecordNum;i++){
         for(j=0;j<routeRecord[i].PlanesNum;j++){
             for(k=0;k<routeRecord[i].LengthArray[j];k++){
-                xqxMatrix[i][i]+=ValueMatrix[routeRecord[i].PlanesType][routeRecord[i].AirlineArray[j][k*4]][routeRecord[i].AirlineArray[j][k*4+1]][routeRecord[i].AirlineArray[j][k*4+2]];
-//                if(i==1909||i==1941||i==2580){
-//                    printf("%d %d %d %d %d\n",routeRecord[i].PlanesType,routeRecord[i].AirlineArray[j][k*4],routeRecord[i].AirlineArray[j][k*4+1],routeRecord[i].AirlineArray[j][k*4+2],ValueMatrix[routeRecord[i].PlanesType][routeRecord[i].AirlineArray[j][k*4]][routeRecord[i].AirlineArray[j][k*4+1]][routeRecord[i].AirlineArray[j][k*4+2]]);
-//                }
+                xqxMatrix[i][i]+=ValueMatrix[routeRecord[i].PlanesType][routeRecord[i].AirlineArray[j][k*4]][routeRecord[i].AirlineArray[j][k*4+1]][routeRecord[i].AirlineArray[j][k*4+2]%DayTtime];
             }
         }
         if(xqxMatrix[i][i]!=routeRecord[i].solvalue)
@@ -95,9 +92,7 @@ void AddInMatrix(int *TotalNum, int Knum, int MaxFlight, int k)
 
     for(i=0;i*2<Knum;i++){
             Ati=TotalNum[i*2];
-           // printf("Add:%d %d\n",Ati,xqxMatrix[Ati][Ati]);
             xqxMatrix[Ati][Ati]-=(BIGM*(TotalNum[i*2+1]*TotalNum[i*2+1]-2*MaxFlight*TotalNum[i*2+1])*k);
-         //   printf("Add:%d %d\n",Ati,xqxMatrix[Ati][Ati]);
         for(j=i+1;j*2<Knum;j++){
             Atj=TotalNum[j*2];
             xqxMatrix[Ati][Atj]-=(BIGM*(TotalNum[i*2+1]*TotalNum[j*2+1])*k);
@@ -119,8 +114,8 @@ void AddPunish()
     for(i=0;i<AirportsNum;i++){
         for(j=0;j<APT[i].Twn_hour;j++){
             NumIn=NumOut=0;
-            if(APT[i].TimeWindows_hour[j*4]>=252||APT[i].TimeWindows_hour[j*4]<=72)
-                continue;
+            //if(APT[i].TimeWindows_hour[j*4]>=252||APT[i].TimeWindows_hour[j*4]<=72)
+            //    continue;
             for(k=0;k<RecordNum;k++){
                 KnumIn=KnumOut=0;
                 for(routei=0;routei<routeRecord[k].PlanesNum;routei++){
@@ -185,7 +180,7 @@ void AddPunish2()
                     ToalNum[Num++]=Knum;
                 }
             }
-            AddInMatrix(ToalNum,Num,TypeBaseN[j][i],100);
+            AddInMatrix(ToalNum,Num,TypeBaseN[j][i],1000);
         }
     }
 }
@@ -196,11 +191,11 @@ void TransToXqx()
     calculateXMatrix();
     calculateQMatrix();
     int i,j;
-    for(i=0;i<RecordNum;i++){
-        for(j=0;j<RecordNum;j++){
-            xqxMatrix[i][j]/=100;
-        }
-    }
+    //for(i=0;i<RecordNum;i++){
+    //    for(j=0;j<RecordNum;j++){
+    //        xqxMatrix[i][j]/=100;
+    //    }
+    //}
 
     OutxqxFile("xqxorg.txt");
 //    for(i=0;i<RecordNum;i++){
