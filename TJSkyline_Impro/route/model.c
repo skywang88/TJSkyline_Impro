@@ -183,14 +183,16 @@ int IsMatchConstrait1(int point1, int time1, int direction)
     int i;
 //    if(timetable[point1][time1]==0)
 //        return 1;
-    if(direction==0&&(time1>=264||time1<=84))
-        return 0;
 	time1 = time1 % DayTtime;
 	if (time1 == 0) {
 		return 0;
 	}
-    if(APT[point1].Twn_five==-1&&APT[point1].Twn_hour==-1)
-        return 1;
+	if (APT[point1].Twn_five == -1 && APT[point1].Twn_hour == -1) {
+		if (direction == 0 && (time1 >= 264 || time1 <= 84))
+			return 0;
+		else return 1;
+	}
+
     if(APT[point1].Twn_five==0&&APT[point1].Twn_hour==0)
         return 0;
     if(APT[point1].Twn_hour!=-1){
@@ -258,198 +260,222 @@ int IsFeasibleAirline(int airtype, int point1, int point2)
 }
 
 
-int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *involeAirports)
-{
-    int i=0;
-    int airplane,point1,point2,time1,time2;
-    for(airplane=0;airplane<AirPlaneNum;airplane++){
-        for(point1=0;point1<AirportsNum;point1++){
-                if(involeAirports[point1]==0){
-                    continue;
-                }
-                if(!CanAirport(point1, AirPlaneTypei)){
-                    continue;
-                }
-            for(point2=0;point2<AirportsNum;point2++){
-                if(point1==point2)
-                    continue;
-				if ((point1 == 5|| point1 == 50||point1==17) && point2 == 16)
-					printf("\n");
-                if(involeAirports[point2]==0){
-                    continue;
-                }
-                if(!CanAirport(point1, AirPlaneTypei)){
-                    continue;
-                }
-                if(!IsFeasibleAirline(AirPlaneTypei,point1,point2)){
-                    continue;
-                }
 
-                for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-					//if ((point1 == 5 || point1 == 50 || point1 == 17) && point2 == 16 &&
-					//	(time1 == 252 || time1 == 120 || time1 == 168))
-					//	printf("\n");
-					if(!IsMatchConstrait1(point1,time1,0)){
-                        continue;
-                    }
-					if (ValueMatrix[AirPlaneTypei][point1][point2][time1%DayTtime] <= LeastValue) {
+
+int CalValueNum(int AirPlaneTypei, int *Begin_Airports, int Begin_airportsNum, int *involeAirports)
+{
+	int i = 0;
+	int begini = 0;
+	int beginj = 0;
+	int beginii = 0;
+	int airplane, point1, point2, time1, time2;
+	int *MaxTimeEnd = (int *)malloc(sizeof(int)*AirportsNum);
+	memset(MaxTimeEnd, 0, sizeof(int)*AirportsNum);
+	for (point2 = 0; point2 < AirportsNum; point2++) {
+		for (begini = 0; begini < Begin_airportsNum; begini++) {
+			MaxTimeEnd[point2] = Max(MaxTimeEnd[point2], AirportsTimeEnd[AirPlaneTypei][Begin_Airports[begini * 2]][point2]);
+		}
+	}
+	for (begini = 0; begini < Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < Begin_Airports[begini * 2 + 1]; beginj++) {
+			for (point1 = 0; point1 < AirportsNum; point1++) {
+				if (involeAirports[point1] == 0) {
+					continue;
+				}
+				if (!CanAirport(point1, AirPlaneTypei)) {
+					continue;
+				}
+				for (point2 = 0; point2 < AirportsNum; point2++) {
+					if (point1 == point2)
+						continue;
+					if (involeAirports[point2] == 0) {
 						continue;
 					}
-                    for(time2=time1+RTime[AirPlaneTypei][point1][point2]-1;
-                    time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point2]&&time2<=time1+RTime[AirPlaneTypei][point1][point2]+2;time2++){
-                      //  printf("%d %d %d %d\n",point1,point2,time1,time2);
-                        if(!IsMatchConstrait1(point2,time2,1)){
-                            continue;
-                        }
-						
-                        i++;
-                    }
-                }
+					if (!CanAirport(point1, AirPlaneTypei)) {
+						continue;
+					}
+					if (!IsFeasibleAirline(AirPlaneTypei, point1, point2)) {
+						continue;
+					}
 
-            }
-        }
-    }
-    Sumv[0]=i;
+					for (time1 = AirportsTimeStart[AirPlaneTypei][Begin_Airports[begini * 2]][point1]; time1 <= Dend; time1++) {
+						if (!IsMatchConstrait1(point1, time1, 0)) {
+							continue;
+						}
+						if (ValueMatrix[AirPlaneTypei][point1][point2][time1%DayTtime] <= LeastValue) {
+							continue;
+						}
+						for (time2 = time1 + RTime[AirPlaneTypei][point1][point2] - 1;
+							time2 <= MaxTimeEnd[point2] && time2 <= time1 + RTime[AirPlaneTypei][point1][point2] + 2; time2++) {
+							if (!IsMatchConstrait1(point2, time2, 1)) {
+								continue;
+							}
 
-    for(airplane=0;airplane<AirPlaneNum;airplane++){
-        for(point1=0;point1<AirportsNum;point1++){
-                if(involeAirports[point1]==0){
-                    continue;
-                }
-                if(!CanAirport(point1, AirPlaneTypei)){
-                    continue;
-                }
+							i++;
+						}
+					}
 
-                    for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-                        if(!IsMatchConstrait1(point1,time1,1)){
-                            continue;
-                        }
-                    for(time2=time1+APT[point1].PassTime[AirPlaneTypei];
-                    time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point1]&&time2<=time1+APT[point1].PassTime[AirPlaneTypei]+24;time2++){
-                        if(!IsMatchConstrait1(point1,time2,0)){
-                            continue;
-                        }
-                        i++;
+				}
+			}
+		}
+	}
+	Sumv[0] = i;
+
+	for (begini = 0; begini < Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < Begin_Airports[begini * 2 + 1]; beginj++) {
+			for (point1 = 0; point1 < AirportsNum; point1++) {
+				if (involeAirports[point1] == 0) {
+					continue;
+				}
+				if (!CanAirport(point1, AirPlaneTypei)) {
+					continue;
+				}
+
+				for (time1 = AirportsTimeStart[AirPlaneTypei][Begin_Airports[begini * 2]][point1]; time1 <= Dend; time1++) {
+					if (!IsMatchConstrait1(point1, time1, 1)) {
+						continue;
+					}
+					for (time2 = time1 + APT[point1].PassTime[AirPlaneTypei];
+						time2 <= MaxTimeEnd[point1] && time2 <= time1 + APT[point1].PassTime[AirPlaneTypei] + 24; time2++) {
+						if (!IsMatchConstrait1(point1, time2, 0)) {
+							continue;
+						}
+						i++;
 
 						if (TypeBaseN[AirPlaneTypei][point1] > 0
 							&& IsShiftTime(time1)) {
 							i++;
 						}
-                    }
-                }
+					}
+				}
 
-            }
-    }
-    Sumv[1]=i;
-
-
-    for(airplane=0;airplane<AirPlaneNum;airplane++){
-        for(time1=Dbegin-36,time2=Dbegin;time2<=Dbegin+MaxBeginTime;time2++){
-            if(!IsMatchConstrait1(Begin_Airports[airplane],time2,0)){
-                continue;
-            }
-            i++;
-
-        }
+			}
+		}
+	}
+	Sumv[1] = i;
 
 
-        for(time1=Dend-MaxEndTime;time1<=Dend;time1++){
-            if(!IsMatchConstrait1(Begin_Airports[AirPlaneNum-airplane-1],time1,1)){
-                continue;
-            }
-            i++;
-        }
-    }
+	for (begini = 0; begini < Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < Begin_Airports[begini * 2 + 1]; beginj++) {
+			for (time1 = Dbegin - 36, time2 = Dbegin; time2 <= Dbegin + MaxBeginTime; time2++) {
+				if (!IsMatchConstrait1(Begin_Airports[begini * 2], time2, 0)) {
+					continue;
+				}
+				i++;
+			}
 
-    Sumv[2]=i;
-    Deval=(struct variable *)malloc(sizeof(struct variable)*i);
-    sol=(double *)malloc(sizeof(double)*i);
-    ind=(int *)malloc(sizeof(int)*i);
-    val=(double *)malloc(sizeof(double)*i);
+			for (beginii = 0; beginii < Begin_airportsNum; beginii++) {
+				for (time1 = Dend - MaxEndTime; time1 <= Dend; time1++) {
+					if (!IsMatchConstrait1(Begin_Airports[beginii * 2], time1, 1)) {
+						continue;
+					}
+					i++;
+				}
+			}
+		}
+	}
+
+	Sumv[2] = i;
+	free(MaxTimeEnd);
+	Deval = (struct variable *)malloc(sizeof(struct variable)*i);
+	sol = (double *)malloc(sizeof(double)*i);
+	ind = (int *)malloc(sizeof(int)*i);
+	val = (double *)malloc(sizeof(double)*i);
 	return 1;
 }
 
 
 
-int PreValue(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *involeAirports)
+int PreValue(int AirPlaneTypei, int *Begin_Airports, int Begin_airportsNum, int *involeAirports)
 {
-    int i=0;
-    int airplane,point1,point2,time1,time2;
-    for(airplane=0;airplane<AirPlaneNum;airplane++){
-        for(point1=0;point1<AirportsNum;point1++){
-                if(involeAirports[point1]==0){
-                    continue;
-                }
-                if(!CanAirport(point1, AirPlaneTypei)){
-                    continue;
-                }
-            for(point2=0;point2<AirportsNum;point2++){
-                if(point1==point2)
-                    continue;
-                if(involeAirports[point2]==0){
-                    continue;
-                }
-                if(!CanAirport(point1, AirPlaneTypei)){
-                    continue;
-                }
-                if(!IsFeasibleAirline(AirPlaneTypei,point1,point2)){
-                    continue;
-                }
-                for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-					if(!IsMatchConstrait1(point1,time1,0)){
-                        continue;
-                    }
-					if (ValueMatrix[AirPlaneTypei][point1][point2][time1%DayTtime] <= LeastValue) {
+	int i = 0;
+	int begini, beginii, beginj;
+	int airplane, point1, point2, time1, time2;
+	int *MaxTimeEnd = (int *)malloc(sizeof(int)*AirportsNum);
+	memset(MaxTimeEnd, 0, sizeof(int)*AirportsNum);
+	for (point2 = 0; point2 < AirportsNum; point2++) {
+		for (begini = 0; begini < Begin_airportsNum; begini++) {
+			MaxTimeEnd[point2] = Max(MaxTimeEnd[point2], AirportsTimeEnd[AirPlaneTypei][Begin_Airports[begini * 2]][point2]);
+		}
+	}
+	for (begini = 0, airplane = 0; begini < Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < Begin_Airports[begini * 2 + 1]; beginj++, airplane++) {
+			for (point1 = 0; point1 < AirportsNum; point1++) {
+				if (involeAirports[point1] == 0) {
+					continue;
+				}
+				if (!CanAirport(point1, AirPlaneTypei)) {
+					continue;
+				}
+				for (point2 = 0; point2 < AirportsNum; point2++) {
+					if (point1 == point2)
+						continue;
+					if (involeAirports[point2] == 0) {
 						continue;
 					}
-                    for(time2=time1+RTime[AirPlaneTypei][point1][point2]-1;
-                    time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point2]&&time2<=time1+RTime[AirPlaneTypei][point1][point2]+2;time2++){
-                        if(!IsMatchConstrait1(point2,time2,1)){
-                            continue;
-                        }
-                        Deval[i].variableType=0;
-                        Deval[i].airplane=airplane;
-                        Deval[i].airplaneType=AirPlaneTypei;
-                        Deval[i].point1=point1;
-                        Deval[i].point2=point2;
-                        Deval[i].time1=time1;
-                        Deval[i].time2=time2;
-                        i++;
-                    }
-                }
+					if (!CanAirport(point1, AirPlaneTypei)) {
+						continue;
+					}
+					if (!IsFeasibleAirline(AirPlaneTypei, point1, point2)) {
+						continue;
+					}
+					for (time1 = AirportsTimeStart[AirPlaneTypei][Begin_Airports[begini * 2]][point1]; time1 <= Dend; time1++) {
+						if (!IsMatchConstrait1(point1, time1, 0)) {
+							continue;
+						}
+						if (ValueMatrix[AirPlaneTypei][point1][point2][time1%DayTtime] <= LeastValue) {
+							continue;
+						}
+						for (time2 = time1 + RTime[AirPlaneTypei][point1][point2] - 1;
+							time2 <= MaxTimeEnd[point2] && time2 <= time1 + RTime[AirPlaneTypei][point1][point2] + 2; time2++) {
+							if (!IsMatchConstrait1(point2, time2, 1)) {
+								continue;
+							}
+							Deval[i].variableType = 0;
+							Deval[i].airplane = airplane;
+							Deval[i].airplaneType = AirPlaneTypei;
+							Deval[i].point1 = point1;
+							Deval[i].point2 = point2;
+							Deval[i].time1 = time1;
+							Deval[i].time2 = time2;
+							i++;
+						}
+					}
 
-            }
-        }
-    }
-    Sumv[0]=i;
+				}
+			}
+		}
+	}
+	Sumv[0] = i;
 
-    for(airplane=0;airplane<AirPlaneNum;airplane++){
-        for(point1=0;point1<AirportsNum;point1++){
-                if(involeAirports[point1]==0){
-                    continue;
-                }
-                if(!CanAirport(point1, AirPlaneTypei)){
-                    continue;
-                }
-                    for(time1=AirportsTimeStart[AirPlaneTypei][Begin_Airports[airplane]][point1];time1<=Dend;time1++){
-                        if(!IsMatchConstrait1(point1,time1,1)){
-                            continue;
-                        }
-                    for(time2=time1+APT[point1].PassTime[AirPlaneTypei];
-                    time2<=AirportsTimeEnd[AirPlaneTypei][Begin_Airports[AirPlaneNum-airplane-1]][point1]&&time2<=time1+APT[point1].PassTime[AirPlaneTypei]+24;time2++){
-                        if(!IsMatchConstrait1(point1,time2,0)){
-                            continue;
-                        }
+	for (begini = 0, airplane = 0; begini < Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < Begin_Airports[begini * 2 + 1]; beginj++, airplane++) {
+			for (point1 = 0; point1 < AirportsNum; point1++) {
+				if (involeAirports[point1] == 0) {
+					continue;
+				}
+				if (!CanAirport(point1, AirPlaneTypei)) {
+					continue;
+				}
+				for (time1 = AirportsTimeStart[AirPlaneTypei][Begin_Airports[begini * 2]][point1]; time1 <= Dend; time1++) {
+					if (!IsMatchConstrait1(point1, time1, 1)) {
+						continue;
+					}
+					for (time2 = time1 + APT[point1].PassTime[AirPlaneTypei];
+						time2 <= MaxTimeEnd[point1] && time2 <= time1 + APT[point1].PassTime[AirPlaneTypei] + 24; time2++) {
+						if (!IsMatchConstrait1(point1, time2, 0)) {
+							continue;
+						}
 						//printf("%d_%d_%d_%d_%d\n", i, 1, point1, time1, time2);
-                        Deval[i].variableType=1;
-                        Deval[i].airplane=airplane;
-                        Deval[i].airplaneType=AirPlaneTypei;
-                        Deval[i].point1=point1;
-                        Deval[i].point2=point1;
-                        Deval[i].time1=time1;
-                        Deval[i].time2=time2;
+						Deval[i].variableType = 1;
+						Deval[i].airplane = airplane;
+						Deval[i].airplaneType = AirPlaneTypei;
+						Deval[i].point1 = point1;
+						Deval[i].point2 = point1;
+						Deval[i].time1 = time1;
+						Deval[i].time2 = time2;
 						//printf("%d_%d_%d_%d_%d\n",i, Deval[i].variableType, Deval[i].point1, Deval[i].time1, Deval[i].time2);
-                        i++;
+						i++;
 
 						if (TypeBaseN[AirPlaneTypei][point1] > 0
 							&& IsShiftTime(time1)) {
@@ -463,59 +489,62 @@ int PreValue(int AirPlaneTypei, int *Begin_Airports, int AirPlaneNum, int *invol
 							Deval[i].time2 = time2;
 							//printf("%d_%d_%d_%d_%d\n", i, Deval[i].variableType, Deval[i].point1, Deval[i].time1, Deval[i].time2);
 							i++;
-							
+
 						}
-                    }
-                }
+					}
+				}
 
-            }
-    }
-    Sumv[1]=i;
-
-
-    for(airplane=0;airplane<AirPlaneNum;airplane++){
-            for(time1=Dbegin-36,time2=Dbegin;time2<=Dbegin+MaxBeginTime;time2++){
-                if(!IsMatchConstrait1(Begin_Airports[airplane],time2,0)){
-                    continue;
-                }
-                Deval[i].variableType=2;
-                Deval[i].airplane=airplane;
-                Deval[i].airplaneType=AirPlaneTypei;
-                Deval[i].point1=Begin_Airports[airplane];
-                Deval[i].time1=time1;
-                Deval[i].time2=time2;
-                i++;
-            }
+			}
+		}
+	}
+	Sumv[1] = i;
 
 
-            for(time1=Dend-MaxEndTime;time1<=Dend;time1++){
-                if(!IsMatchConstrait1(Begin_Airports[AirPlaneNum-airplane-1],time1,1)){
-                    continue;
-                }
-                Deval[i].variableType=2;
-                Deval[i].airplane=airplane;
-                Deval[i].airplaneType=AirPlaneTypei;
-                Deval[i].point1=Begin_Airports[AirPlaneNum-airplane-1];
-                Deval[i].time1=time1;
-                Deval[i].time2=Dend+36;
-                i++;
-            }
+	for (begini = 0, airplane = 0; begini<Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < Begin_Airports[begini * 2 + 1]; beginj++, airplane++) {
+			for (time1 = Dbegin - 36, time2 = Dbegin; time2 <= Dbegin + MaxBeginTime; time2++) {
+				if (!IsMatchConstrait1(Begin_Airports[begini * 2], time2, 0)) {
+					continue;
+				}
+				Deval[i].variableType = 2;
+				Deval[i].airplane = airplane;
+				Deval[i].airplaneType = AirPlaneTypei;
+				Deval[i].point1 = Begin_Airports[airplane];
+				Deval[i].time1 = time1;
+				Deval[i].time2 = time2;
+				i++;
+			}
 
+			for (beginii = 0; beginii < Begin_airportsNum; beginii++) {
+				for (time1 = Dend - MaxEndTime; time1 <= Dend; time1++) {
+					if (!IsMatchConstrait1(Begin_Airports[beginii * 2], time1, 1)) {
+						continue;
+					}
+					Deval[i].variableType = 2;
+					Deval[i].airplane = airplane;
+					Deval[i].airplaneType = AirPlaneTypei;
+					Deval[i].point1 = Begin_Airports[beginii*2];
+					Deval[i].time1 = time1;
+					Deval[i].time2 = Dend + 36;
+					i++;
+				}
+			}
 
-    }
-    Sumv[2]=i;
+		}
+	}
+	Sumv[2] = i;
 	return 1;
 }
 
 
-double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, int *involeAirports, int PassAirports, int ArriveTime)
+double FindBestmodel(int AirPlaneTypei, int *begin_airports, int Begin_airportsNum, int *involeAirports, int PassAirports, int ArriveTime)
 {
     clock_t begint,endt;
     constraitNum=0;
     Sumv[0]=Sumv[1]=Sumv[2]=0;
     constraitNum=0;
-    CalValueNum(AirPlaneTypei, begin_airports, AirPlaneNum, involeAirports);
-    PreValue(AirPlaneTypei, begin_airports, AirPlaneNum, involeAirports);
+    CalValueNum(AirPlaneTypei, begin_airports, Begin_airportsNum, involeAirports);
+    PreValue(AirPlaneTypei, begin_airports,  Begin_airportsNum , involeAirports);
     char name[200];
     memset(name,0,sizeof(char)*200);
     double tt;
@@ -527,11 +556,19 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
     int mi;
     int apei;
 	int shifti;
+	int begini;
+	int beginj;
+	int beginii;
     double objval;
     int optimstatus;
 	int solcount;
+	int AirPlaneNum = 0;
     GRBenv *env=NULL;
     GRBmodel *model=NULL;
+
+	for (begini = 0; begini < Begin_airportsNum; begini++) {
+		AirPlaneNum += begin_airports[begini * 2+1];
+	}
 
     error = GRBloadenv(&env, "model.log");
     if (error) goto QUIT;
@@ -674,20 +711,22 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 
 
 //    route constrait
-    for(apei=0;apei<AirPlaneNum;apei++){
-        for(i=Sumv[1],j=0;i<Sumv[2];i++){
-            if(Deval[i].time1==Dbegin-36&&Deval[i].airplane==apei){
-                ind[j]=i;
-                val[j]=1;
-                j++;
-            }
-        }
-        //飞机在基地起点出度为1，保证独占性
-        sprintf(name,"RouteBegin_%d",apei);
-        error=GRBaddconstr(model, j, ind, val, GRB_EQUAL, 1, name);
-        constraitNum++;
-        if(error)   goto QUIT;
-    }
+	for (begini = 0,apei=0; begini < Begin_airportsNum; begini++) {
+		for (beginj = 0; beginj < begin_airports[begini*2+1];beginj++, apei++) {
+			for (i = Sumv[1], j = 0; i < Sumv[2]; i++) {
+				if (Deval[i].time1 == Dbegin - 36 && Deval[i].airplane == apei) {
+					ind[j] = i;
+					val[j] = 1;
+					j++;
+				}
+			}
+			//飞机在基地起点出度为1，保证独占性
+			sprintf(name, "RouteBegin_%d", apei);
+			error = GRBaddconstr(model, j, ind, val, GRB_EQUAL, 1, name);
+			constraitNum++;
+			if (error)   goto QUIT;
+		}
+	}
 
         for(api=0;api<AirportsNum;api++){
             if(involeAirports[api]==0){
@@ -794,17 +833,17 @@ double FindBestmodel(int AirPlaneTypei, int *begin_airports, int AirPlaneNum, in
 //    }
 
         // balance cons
-        for(mi=0;mi<AirPlaneNum;mi++){
+        for(begini=0;begini<Begin_airportsNum;begini++){
             for(i=Sumv[1],j=0;i<Sumv[2];i++){
-                if(Deval[i].airplane==mi&&Deval[i].point1==begin_airports[AirPlaneNum-mi-1]&&Deval[i].time2==Dend+36){
+                if(Deval[i].point1==begin_airports[begini*2]&&Deval[i].time2==Dend+36){
                     ind[j]=i;
                     val[j]=1;
                     j++;
                 }
             }
             //基地平衡约束
-            sprintf(name,"balance_%d_%d",begin_airports[mi],mi);
-            error=GRBaddconstr(model, j, ind, val, GRB_EQUAL, 1, name);
+            sprintf(name,"balance_%d_%d", begin_airports[begini * 2], begin_airports[begini * 2+1]);
+            error=GRBaddconstr(model, j, ind, val, GRB_EQUAL, begin_airports[begini * 2+1], name);
             constraitNum++;
             if(error)   goto QUIT;
         }
